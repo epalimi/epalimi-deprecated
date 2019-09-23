@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">은평공리 관리자 콘솔</div>
+                <div class="card-header bg-dark text-light">은평공리 관리자 콘솔</div>
 
                 <div class="card-body">
                     은평공리 관리자 콘솔 메인페이지입니다.<br>

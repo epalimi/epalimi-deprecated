@@ -13,7 +13,12 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->
             <ul class="navbar-nav mr-auto">
-
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.category.index') }}">카테고리 관리</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.information.index') }}">인포메이션 관리</a>
+                </li>
             </ul>
 
             <!-- Right Side Of Navbar -->
