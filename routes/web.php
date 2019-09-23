@@ -19,10 +19,6 @@ Route::get('/', function () {
 
 Auth::routes(['register' => false, 'reset' => false]);
 
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-
 /**
  * 어드민 콘솔 라우트 그룹
  */
