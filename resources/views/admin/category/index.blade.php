@@ -14,7 +14,7 @@
                         </li>
                         @foreach ($categories as $category)
                         <li class="list-group-item">
-                            <p>카테고리 이름: {{ $category->title }}</p>
+                            <div class="d-flex mb-3">카테고리 이름: {{ $category->title }} <span class="ml-auto text-muted">인포메이션 개수: {{ $category->informations->count() }}</span> </div>
                             <a class="btn btn-secondary w-100" href="{{ route('admin.category.show', ['category' => $category->id]) }}">상세보기</a>
                         </li>
                         @endforeach

@@ -8,17 +8,17 @@
                 <div class="card-header bg-dark text-light">인포메이션 - Edit</div>
 
                 <div class="card-body">
-                    <form action="{{ route('admin.information.update', ['information' => $information->id]) }}" method="POST">
+                    <form action="{{ route('admin.information.update', ['information' => $information->id]) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
                         <input class="form-control" type="text" name="title" placeholder="제목" value="{{ $information->title }}">
                         <select class="form-control" name="category_id">
                             @foreach ($categories as $category)
-                            <option value="{{ $category->id }}">{{ $category->title }}</option>
+                            <option value="{{ $category->id }}" {{ $category->id == $information->category->id ? 'selected' : '' }}>{{ $category->title }}</option>
                             @endforeach
                         </select>
                         <input class="form-control" type="text" name="location" placeholder="장소" value="{{ $information->location }}">
-                        <input class="form-control" type="text" name="thumb" placeholder="썸네일" value="{{ $information->thumb }}">
+                        <input class="form-control" type="file" name="thumb" placeholder="썸네일" value="{{ $information->thumb }}">
                         <input class="form-control" type="text" name="phone" placeholder="문의전화" value="{{ $information->phone }}">
                         <input class="form-control" type="text" name="link" placeholder="외부링크" value="{{ $information->link }}">
                         <input class="form-control" type="date" name="start_date" placeholder="시작날짜" value="{{ $information->start_date }}">

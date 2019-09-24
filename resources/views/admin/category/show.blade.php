@@ -9,6 +9,16 @@
 
                 <div class="card-body">
                     <p>카테고리 이름: {{ $category->title }}</p>
+                    <ul class="list-group">
+                        @foreach ($category->informations as $info)
+                        <li class="list-group-item">
+                            <a class="stretched-link d-block" href="{{ route('admin.information.show', ['information' => $info]) }}">
+                                {{ $info->title }}
+                            </a>
+                            <span class="text-muted">{{ $info->location }} - {{ $info->phone }}</span>
+                        </li>
+                        @endforeach
+                    </ul>
                     <a class="btn btn-secondary w-100" href="{{ route('admin.category.edit', ['category' => $category->id]) }}">수정</a>
                     <a class="btn btn-secondary w-100" href="{{ route('admin.category.index') }}">목록</a>
                 </div>

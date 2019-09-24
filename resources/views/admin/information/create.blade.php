@@ -8,7 +8,7 @@
                 <div class="card-header bg-dark text-light">인포메이션 - Create</div>
 
                 <div class="card-body">
-                    <form action="{{ route('admin.information.store') }}" method="POST">
+                    <form action="{{ route('admin.information.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <input class="form-control" type="text" name="title" placeholder="제목">
                         <select class="form-control" name="category_id">
@@ -17,7 +17,7 @@
                             @endforeach
                         </select>
                         <input class="form-control" type="text" name="location" placeholder="장소">
-                        <input class="form-control" type="text" name="thumb" placeholder="썸네일">
+                        <input class="form-control" type="file" name="thumb" placeholder="썸네일">
                         <input class="form-control" type="text" name="phone" placeholder="문의전화">
                         <input class="form-control" type="text" name="link" placeholder="외부링크">
                         <input class="form-control" type="date" name="start_date" placeholder="시작날짜">

@@ -5,12 +5,14 @@ namespace App\Http\Controllers;
 use App\Category;
 use App\Information;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class InformationController extends Controller
 {
     private $rule = [
         'title' => 'required',
         'link' => 'url',
+        'thumb' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         'start_date' => 'date',
         'end_date' => 'date',
         'start_time' => 'date_format:H:i',
@@ -51,10 +53,12 @@ class InformationController extends Controller
     {
         request()->validate($this->rule);
 
+        $thumb_path = request()->hasFile('thumb') ? request()->file('thumb')->store('information_thumb') : null;
+
         $id = Information::create([
             'title' => request('title'),
             'location' => request('location'),
-            'thumb' => request('thumb'),
+            'thumb' => $thumb_path,
             'phone' => request('phone'),
             'link' => request('link'),
             'start_date' => request('start_date'),
@@ -102,10 +106,15 @@ class InformationController extends Controller
     {
         request()->validate($this->rule);
 
+        if (request()->hasFile('thumb') && $information->thumb != null) {
+            Storage::delete([$information->thumb]);
+        }
+        $thumb_path = request()->hasFile('thumb') ? request()->file('thumb')->store('information_thumb') : $information->thumb;
+
         $information->update([
             'title' => request('title'),
             'location' => request('location'),
-            'thumb' => request('thumb'),
+            'thumb' => $thumb_path,
             'phone' => request('phone'),
             'link' => request('link'),
             'start_date' => request('start_date'),

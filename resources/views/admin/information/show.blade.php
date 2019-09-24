@@ -17,7 +17,7 @@
                     <p>기간-종료: {{ $information->end_date }}</p>
                     <p>운영시간-시작: {{ $information->start_time }}</p>
                     <p>운영시간-종료: {{ $information->end_time }}</p>
-                    <p>카테고리: {{ $information->category_id }}</p>
+                    <p>카테고리: {{ $information->category->title }}</p>
                     <a class="btn btn-secondary w-100" href="{{ route('admin.information.edit', ['information' => $information->id]) }}">수정</a>
                     <a class="btn btn-secondary w-100" href="{{ route('admin.information.index') }}">목록</a>
                 </div>
