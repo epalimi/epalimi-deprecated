@@ -4,7 +4,7 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
-            은평공리 관리자 콘솔
+            은평공리 <span class="text-danger">관리자 콘솔</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="네이게이션 토글">
             <span class="navbar-toggler-icon"></span>
@@ -54,4 +54,8 @@
 <main class="py-4">
     @yield('content')
 </main>
+
+<div class="d-none">
+    @yield('hidden')
+</div>
 @endsection

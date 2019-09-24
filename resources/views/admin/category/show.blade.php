@@ -19,8 +19,8 @@
                         </li>
                         @endforeach
                     </ul>
-                    <a class="btn btn-secondary w-100" href="{{ route('admin.category.edit', ['category' => $category->id]) }}">수정</a>
-                    <a class="btn btn-secondary w-100" href="{{ route('admin.category.index') }}">목록</a>
+                    <a class="btn btn-dark w-100" href="{{ route('admin.category.edit', ['category' => $category->id]) }}">수정</a>
+                    <a class="btn btn-dark w-100" href="{{ route('admin.category.index') }}">목록</a>
                 </div>
             </div>
         </div>

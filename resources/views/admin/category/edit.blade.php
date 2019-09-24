@@ -13,6 +13,7 @@
                         @method('PUT')
                         <input class="form-control" type="text" name="title" placeholder="제목" value="{{ $category->title }}">
                         <input class="btn btn-dark w-100" type="submit" value="수정하기">
+                        <a class="btn btn-dark w-100" href="{{ route('admin.category.show', ['category' => $category]) }}">취소</a>
                     </form>
                     @if ($errors->any())
                     @foreach ($errors->all() as $error)

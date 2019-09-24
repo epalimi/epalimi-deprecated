@@ -8,21 +8,48 @@
                 <div class="card-header bg-dark text-light">인포메이션</div>
 
                 <div class="card-body">
-                    <ul class="list-group">
-                        <li class="list-group-item">
-                            <a class="btn btn-dark w-100" href="{{ route('admin.information.create') }}">새로 만들기</a>
-                        </li>
-                        @foreach ($informations as $info)
-                        <li class="list-group-item">
-                            <p>제목: {{ $info->title }}</p>
-                            <p>장소: {{ $info->location }}</p>
-                            <p>대표사진: {{ $info->thumb }}</p>
-                            <p>안내전화: {{ $info->phone }}</p>
-                            <p>링크: {{ $info->link }}</p>
-                            <a class="btn btn-secondary w-100" href="{{ route('admin.information.show', ['information' => $info->id]) }}">상세보기</a>
-                        </li>
-                        @endforeach
-                    </ul>
+                    <table class="table table-hover border-bottom">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">ID</th>
+                                <th scope="col">카테고리</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">바로가기</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @if ($informations->count() > 0)
+                            @foreach ($informations as $info)
+                            <tr>
+                                <td>{{ $info->id }}</td>
+                                <td>{{ $info->category->title }}</td>
+                                <td>
+                                    <a href="{{ route('admin.information.show', ['information' => $info]) }}">{{ $info->title }}</a>
+                                </td>
+                                <td>
+                                    {{-- <a href="{{ route('admin.information.show', ['information' => $info]) }}" style="text-decoration: none;">
+                                    <img src="{{ asset('svg/settings.svg') }}" style="width:22px; height:22px;">
+                                    </a> --}}
+                                    <a href="#" onclick="confirmFormSubmit('#deleteForm{{ $info->id }}', '정말 삭제하시겠습니까?')">
+                                        <img src="{{ asset('svg/delete.svg') }}" style="width:22px; height:22px;">
+                                    </a>
+                                </td>
+                            </tr>
+                            <form id="deleteForm{{ $info->id }}" class="d-none" action="{{ route('admin.information.destroy', ['information' => $info->id]) }}" method="POST">
+                                @csrf
+                                @method('DELETE')
+                            </form>
+                            @endforeach
+                            @else
+                            <tr>
+                                <td colspan="4">인포메이션이 없습니다!</td>
+                            </tr>
+                            @endif
+                        </tbody>
+                    </table>
+                    <div class="d-flex">
+                        <a class="btn btn-dark ml-auto" href="{{ route('admin.information.create') }}">새로 만들기</a>
+                    </div>
                 </div>
             </div>
         </div>

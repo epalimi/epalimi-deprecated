@@ -11,12 +11,12 @@ class InformationController extends Controller
 {
     private $rule = [
         'title' => 'required',
-        'link' => 'url',
-        'thumb' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        'start_date' => 'date',
-        'end_date' => 'date',
-        'start_time' => 'date_format:H:i',
-        'end_time' => 'date_format:H:i',
+        'link' => 'nullable|url',
+        'thumb' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        'start_date' => 'nullable|date',
+        'end_date' => 'nullable|date',
+        'start_time' => 'nullable|date_format:H:i',
+        'end_time' => 'nullable|date_format:H:i',
     ];
 
     /**
@@ -135,6 +135,10 @@ class InformationController extends Controller
      */
     public function destroy(Information $information)
     {
+        if ($information->thumb != null) {
+            Storage::delete([$information->thumb]);
+        }
+
         $information->delete();
         return redirect(route('admin.information.index'));
     }

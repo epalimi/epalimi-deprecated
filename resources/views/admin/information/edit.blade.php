@@ -26,6 +26,7 @@
                         <input class="form-control" type="time" name="start_time" placeholder="영업시작시간" value="{{ $information->start_time }}">
                         <input class="form-control" type="time" name="end_time" placeholder="영업종료시간" value="{{ $information->end_time }}">
                         <input class="btn btn-dark w-100" type="submit" value="수정하기">
+                        <a class="btn btn-dark w-100" href="{{ route('admin.information.show', ['information' => $information]) }}">취소</a>
                     </form>
                     @if ($errors->any())
                     @foreach ($errors->all() as $error)
