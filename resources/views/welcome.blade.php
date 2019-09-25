@@ -42,7 +42,7 @@
     @if (Route::has('login'))
     <div class="position-absolute" style="top:10px; right:15px">
         @auth
-        <a href="{{ url('/home') }}">홈</a>
+        <a href="{{ url('/') }}">홈</a>
         @else
         <a href="{{ route('login') }}">로그인</a>
 
@@ -60,14 +60,10 @@
         </div>
 
         <div>
-            <a href="#">Home</a>
-            <a href="#">Test1</a>
-            <a href="#">Test2</a>
-            <a href="#">Test3</a>
-            <a href="#">Test4</a>
-            <a href="#">Test5</a>
-            <a href="#">Test6</a>
-            <a href="#">Test7</a>
+            <a href="#">홈</a>
+            @foreach (App\Category::all() as $category)
+            <a href="#">{{ $category->title }}</a>
+            @endforeach
         </div>
     </div>
 

@@ -8,22 +8,44 @@
                 <div class="card-header bg-dark text-light">카테고리 - Show</div>
 
                 <div class="card-body">
-                    <p>카테고리 이름: {{ $category->title }}</p>
-                    <ul class="list-group">
-                        @foreach ($category->informations as $info)
-                        <li class="list-group-item">
-                            <a class="stretched-link d-block" href="{{ route('admin.information.show', ['information' => $info]) }}">
-                                {{ $info->title }}
-                            </a>
-                            <span class="text-muted">{{ $info->location }} - {{ $info->phone }}</span>
-                        </li>
-                        @endforeach
-                    </ul>
-                    <a class="btn btn-dark w-100" href="{{ route('admin.category.edit', ['category' => $category->id]) }}">수정</a>
-                    <a class="btn btn-dark w-100" href="{{ route('admin.category.index') }}">목록</a>
+
+                    <div class="mb-4">
+                        <p class="font-weight-bold mb-0">카테고리 이름</p>
+                        <span class="d-block">{{ $category->title }}</span>
+                    </div>
+
+                    <div class="mb-4">
+                        <div class="d-flex">
+                            <span class="font-weight-bold">해당 인포메이션 목록</span>
+                            <span class="text-muted ml-auto">총 {{ $category->informations->count() }} 개</span>
+                        </div>
+                        <ul class="list-group">
+                            @foreach ($category->informations as $info)
+                            <li class="list-group-item">
+                                <a class="stretched-link d-block" href="{{ route('admin.information.show', ['information' => $info]) }}">
+                                    {{ $info->title }}
+                                </a>
+                                <span class="text-muted">{{ data_get($info, 'location', '장소 없음') }} - {{ data_get($info, 'phone', '전화 없음') }}</span>
+                            </li>
+                            @endforeach
+                        </ul>
+                    </div>
+
+                    <div class="btn-group mx-auto d-flex" role="group">
+                        <a class="btn btn-secondary w-100" href="{{ route('admin.category.index') }}">목록</a>
+                        <a class="btn btn-secondary w-100" href="{{ route('admin.category.edit', ['category' => $category->id]) }}">수정</a>
+                        <a class="btn btn-secondary w-100" href="#" style="cursor: pointer;" onclick="confirmFormSubmit('#deleteForm', '정말 삭제하시겠습니까?\n속한 인포메이션들은 카테고리가 NULL이 됩니다.')">삭제</a>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </div>
+@endsection
+
+@section('hidden')
+<form id="deleteForm" action="{{ route('admin.category.destroy', ['category' => $category]) }}" method="POST">
+    @csrf
+    @method('DELETE')
+</form>
 @endsection

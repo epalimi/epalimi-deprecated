@@ -27,18 +27,15 @@
                                     <a href="{{ route('admin.information.show', ['information' => $info]) }}">{{ $info->title }}</a>
                                 </td>
                                 <td>
-                                    {{-- <a href="{{ route('admin.information.show', ['information' => $info]) }}" style="text-decoration: none;">
-                                    <img src="{{ asset('svg/settings.svg') }}" style="width:22px; height:22px;">
-                                    </a> --}}
                                     <a href="#" onclick="confirmFormSubmit('#deleteForm{{ $info->id }}', '정말 삭제하시겠습니까?')">
                                         <img src="{{ asset('svg/delete.svg') }}" style="width:22px; height:22px;">
                                     </a>
                                 </td>
+                                <form id="deleteForm{{ $info->id }}" class="d-none" action="{{ route('admin.information.destroy', ['information' => $info]) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                </form>
                             </tr>
-                            <form id="deleteForm{{ $info->id }}" class="d-none" action="{{ route('admin.information.destroy', ['information' => $info->id]) }}" method="POST">
-                                @csrf
-                                @method('DELETE')
-                            </form>
                             @endforeach
                             @else
                             <tr>
@@ -48,7 +45,7 @@
                         </tbody>
                     </table>
                     <div class="d-flex">
-                        <a class="btn btn-dark ml-auto" href="{{ route('admin.information.create') }}">새로 만들기</a>
+                        <a class="btn btn-secondary ml-auto" href="{{ route('admin.information.create') }}">새로 만들기</a>
                     </div>
                 </div>
             </div>
