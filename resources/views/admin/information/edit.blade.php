@@ -20,40 +20,120 @@
                                         <option value="{{ $category->id }}" {{ $category->id == $information->category->id ? 'selected' : '' }}>{{ $category->title }}</option>
                                         @endforeach
                                     </select>
+                                    <small class="form-text text-muted">
+                                        카테고리 관리 메뉴에서 카테고리를 추가할 수 있습니다.
+                                    </small>
+                                    @error('category_id')
+                                    <div class="alert alert-danger" role="alert">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="mb-4">
                                     <p class="font-weight-bold mb-0">제목</p>
                                     <input class="form-control" type="text" name="title" placeholder="제목" value="{{ $information->title }}">
+                                    <small class="form-text text-muted">
+                                        필수 입력 항목입니다.
+                                    </small>
+                                    @error('title')
+                                    <div class="alert alert-danger" role="alert">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="mb-4">
                                     <p class="font-weight-bold mb-0">대표사진</p>
                                     <input type="file" name="thumb" placeholder="썸네일" value="{{ $information->thumb }}">
+                                    <small class="form-text text-muted">
+                                        선택 항목입니다.
+                                    </small>
+                                    @error('thumb')
+                                    <div class="alert alert-danger" role="alert">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                             </div>
                             <div class="w-50 ml-1">
                                 <div class="mb-4">
                                     <p class="font-weight-bold mb-0">장소</p>
                                     <input class="form-control" type="text" name="location" placeholder="장소" value="{{ $information->location }}">
+                                    <small class="form-text text-muted">
+                                        선택 항목입니다.
+                                    </small>
+                                    @error('location')
+                                    <div class="alert alert-danger" role="alert">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="mb-4">
                                     <p class="font-weight-bold mb-0">안내 전화</p>
                                     <input class="form-control" type="text" name="phone" placeholder="문의전화" value="{{ $information->phone }}">
+                                    <small class="form-text text-muted">
+                                        선택 항목입니다.
+                                    </small>
+                                    @error('phone')
+                                    <div class="alert alert-danger" role="alert">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="mb-4">
                                     <p class="font-weight-bold mb-0">링크</p>
                                     <input class="form-control" type="text" name="link" placeholder="외부링크" value="{{ $information->link }}">
+                                    <small class="form-text text-muted">
+                                        선택 항목입니다.
+                                    </small>
+                                    @error('link')
+                                    <div class="alert alert-danger" role="alert">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="mb-4">
                                     <p class="font-weight-bold mb-0">기간</p>
                                     <input class="form-control" type="date" name="start_date" placeholder="시작날짜" value="{{ $information->start_date }}">
+                                    <small class="form-text text-muted">
+                                        선택 항목입니다.
+                                    </small>
+                                    @error('start_date')
+                                    <div class="alert alert-danger" role="alert">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                     ~
                                     <input class="form-control" type="date" name="end_date" placeholder="종료날짜" value="{{ $information->end_date }}">
+                                    <small class="form-text text-muted">
+                                        선택 항목입니다.
+                                    </small>
+                                    @error('end_date')
+                                    <div class="alert alert-danger" role="alert">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                                 <div class="mb-4">
                                     <p class="font-weight-bold mb-0">운영 시간</p>
                                     <input class="form-control" type="time" name="start_time" placeholder="영업시작시간" value="{{ $information->start_time }}">
+                                    <small class="form-text text-muted">
+                                        선택 항목입니다.
+                                    </small>
+                                    @error('start_time')
+                                    <div class="alert alert-danger" role="alert">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                     ~
                                     <input class="form-control" type="time" name="end_time" placeholder="영업종료시간" value="{{ $information->end_time }}">
+                                    <small class="form-text text-muted">
+                                        선택 항목입니다.
+                                    </small>
+                                    @error('end_time')
+                                    <div class="alert alert-danger" role="alert">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
                                 </div>
                             </div>
                         </div>
