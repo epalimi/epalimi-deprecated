@@ -34,4 +34,7 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
 
     // 카테고리(Category) 리소스 라우트
     Route::resource('category', 'CategoryController');
+
+    // 게시판(Board) 리소스 라우트
+    Route::resource('board', 'BoardController');
 });

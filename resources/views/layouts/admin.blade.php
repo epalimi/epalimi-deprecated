@@ -19,6 +19,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('admin.information.index') }}">인포메이션 관리</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.board.index') }}">게시판 관리</a>
+                </li>
             </ul>
 
             <!-- Right Side Of Navbar -->
