@@ -52,6 +52,14 @@
                                 ~
                                 <span>{{ data_get($information, 'end_time', '없음') }}</span>
                             </div>
+                            <div class="mb-4">
+                                <p class="font-weight-bold mb-0">생성된 날짜</p>
+                                <span>{{ data_get($information, 'created_at', 'NULL') }}</span>
+                            </div>
+                            <div class="mb-4">
+                                <p class="font-weight-bold mb-0">마지막 업데이트</p>
+                                <span>{{ data_get($information, 'updated_at', 'NULL') }}</span>
+                            </div>
                         </div>
                     </div>
                     <div class="btn-group mx-auto d-flex" role="group">
