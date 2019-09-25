@@ -3,7 +3,7 @@
 @section('body')
 <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
     <div class="container">
-        <a class="navbar-brand" href="{{ url('/') }}">
+        <a class="navbar-brand" href="{{ route('admin.main') }}">
             은평공리 <span class="text-danger">관리자 콘솔</span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="네이게이션 토글">

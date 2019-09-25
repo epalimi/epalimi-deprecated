@@ -11,7 +11,7 @@
                     <table class="table table-hover border-bottom">
                         <thead class="thead-light">
                             <tr>
-                                <th scope="col">ID</th>
+                                <th scope="col">고유 ID</th>
                                 <th scope="col">카테고리</th>
                                 <th scope="col">제목</th>
                                 <th scope="col">바로가기</th>
@@ -44,6 +44,9 @@
                             @endif
                         </tbody>
                     </table>
+                    <div class="d-flex justify-content-center">
+                        {{ $informations->links() }}
+                    </div>
                     <div class="d-flex">
                         <a class="btn btn-secondary ml-auto" href="{{ route('admin.information.create') }}">새로 만들기</a>
                     </div>

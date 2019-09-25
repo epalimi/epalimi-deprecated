@@ -11,9 +11,14 @@
                     <form action="{{ route('admin.category.update', ['category' => $category->id]) }}" method="POST">
                         @csrf
                         @method('PUT')
-                        <input class="form-control" type="text" name="title" placeholder="제목" value="{{ $category->title }}">
-                        <input class="btn btn-dark w-100" type="submit" value="수정하기">
-                        <a class="btn btn-dark w-100" href="{{ route('admin.category.show', ['category' => $category]) }}">취소</a>
+                        <div class="mb-4">
+                            <p class="font-weight-bold mb-0">이름</p>
+                            <input class="form-control" type="text" name="title" placeholder="제목" value="{{ $category->title }}">
+                        </div>
+                        <div class="btn-group mx-auto d-flex" role="group">
+                            <input class="btn btn-secondary" type="submit" value="수정하기">
+                            <a class="btn btn-secondary" href="{{ route('admin.category.show', ['category' => $category]) }}">취소</a>
+                        </div>
                     </form>
                     @if ($errors->any())
                     @foreach ($errors->all() as $error)

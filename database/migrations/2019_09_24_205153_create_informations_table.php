@@ -31,7 +31,8 @@ class CreateInformationsTable extends Migration
         Schema::table('informations', function (Blueprint $table) {
             $table->foreign('category_id')
                 ->references('id')->on('categories')
-                ->onDelete('set null');
+                ->onDelete('cascade');
+            // ->onDelete('set null');
         });
     }
 

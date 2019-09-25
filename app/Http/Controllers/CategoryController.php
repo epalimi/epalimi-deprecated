@@ -18,7 +18,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        $categories = Category::all();
+        $categories = Category::paginate(10);
 
         return view('admin.category.index', ['categories' => $categories]);
     }
@@ -58,7 +58,8 @@ class CategoryController extends Controller
      */
     public function show(Category $category)
     {
-        return view('admin.category.show', ['category' => $category]);
+        $informations = $category->informations()->paginate(10);
+        return view('admin.category.show', ['category' => $category, 'informations' => $informations]);
     }
 
     /**
@@ -98,6 +99,7 @@ class CategoryController extends Controller
      */
     public function destroy(Category $category)
     {
+        $category->informations()->delete();
         $category->delete();
         return redirect(route('admin.category.index'));
     }

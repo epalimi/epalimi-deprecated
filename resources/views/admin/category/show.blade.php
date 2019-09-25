@@ -20,7 +20,7 @@
                             <span class="text-muted ml-auto">총 {{ $category->informations->count() }} 개</span>
                         </div>
                         <ul class="list-group">
-                            @foreach ($category->informations as $info)
+                            @foreach ($informations as $info)
                             <li class="list-group-item">
                                 <a class="stretched-link d-block" href="{{ route('admin.information.show', ['information' => $info]) }}">
                                     {{ $info->title }}
@@ -28,13 +28,17 @@
                                 <span class="text-muted">{{ data_get($info, 'location', '장소 없음') }} - {{ data_get($info, 'phone', '전화 없음') }}</span>
                             </li>
                             @endforeach
+                            <div class="d-flex justify-content-center">
+                                {{ $informations->links() }}
+                            </div>
                         </ul>
+
                     </div>
 
                     <div class="btn-group mx-auto d-flex" role="group">
-                        <a class="btn btn-secondary w-100" href="{{ route('admin.category.index') }}">목록</a>
-                        <a class="btn btn-secondary w-100" href="{{ route('admin.category.edit', ['category' => $category->id]) }}">수정</a>
-                        <a class="btn btn-secondary w-100" href="#" style="cursor: pointer;" onclick="confirmFormSubmit('#deleteForm', '정말 삭제하시겠습니까?\n속한 인포메이션들은 카테고리가 NULL이 됩니다.')">삭제</a>
+                        <a class="btn btn-secondary" href="{{ route('admin.category.index') }}">목록</a>
+                        <a class="btn btn-secondary" href="{{ route('admin.category.edit', ['category' => $category->id]) }}">수정</a>
+                        <a class="btn btn-secondary" href="#" style="cursor: pointer;" onclick="confirmFormSubmit('#deleteForm', '정말 삭제하시겠습니까?\n속한 인포메이션들 또한 모두 삭제됩니다.')">삭제</a>
                     </div>
                 </div>
             </div>

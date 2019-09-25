@@ -11,7 +11,7 @@
                     <table class="table table-hover border-bottom">
                         <thead class="thead-light">
                             <tr>
-                                <th scope="col">ID</th>
+                                <th scope="col">고유 ID</th>
                                 <th scope="col">이름</th>
                                 <th scope="col">총 개수</th>
                                 <th scope="col">바로가기</th>
@@ -28,7 +28,7 @@
                                 <td>{{ $category->informations->count() }}</td>
                                 <td>
                                     @if ($category->deletable)
-                                    <a href="#" onclick="confirmFormSubmit('#deleteForm{{ $category->id }}', '정말 삭제하시겠습니까?\n속한 인포메이션들은 카테고리가 NULL이 됩니다.')">
+                                    <a href="#" onclick="confirmFormSubmit('#deleteForm{{ $category->id }}', '정말 삭제하시겠습니까?\n속한 인포메이션들 또한 모두 삭제됩니다.')">
                                         <img src="{{ asset('svg/delete.svg') }}" style="width:22px; height:22px;">
                                     </a>
                                     <form id="deleteForm{{ $category->id }}" class="d-none" action="{{ route('admin.category.destroy', ['category' => $category]) }}" method="POST">
@@ -46,6 +46,9 @@
                             @endif
                         </tbody>
                     </table>
+                    <div class="d-flex justify-content-center">
+                        {{ $categories->links() }}
+                    </div>
                     <div class="d-flex">
                         <a class=" btn btn-secondary ml-auto" href="{{ route('admin.category.create') }}">새로 만들기</a>
                     </div>

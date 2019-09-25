@@ -55,9 +55,9 @@
                         </div>
                     </div>
                     <div class="btn-group mx-auto d-flex" role="group">
-                        <a class="btn btn-secondary w-100" href="{{ route('admin.information.index') }}">목록</a>
-                        <a class="btn btn-secondary w-100" href="{{ route('admin.information.edit', ['information' => $information->id]) }}">수정</a>
-                        <a class="btn btn-secondary w-100" href="#" style="cursor: pointer;" onclick="confirmFormSubmit('#deleteForm', '정말 삭제하시겠습니까?')">삭제</a>
+                        <a class="btn btn-secondary" href="{{ route('admin.information.index') }}">목록</a>
+                        <a class="btn btn-secondary" href="{{ route('admin.information.edit', ['information' => $information->id]) }}">수정</a>
+                        <a class="btn btn-secondary" href="#" style="cursor: pointer;" onclick="confirmFormSubmit('#deleteForm', '정말 삭제하시겠습니까?')">삭제</a>
                     </div>
                 </div>
             </div>
