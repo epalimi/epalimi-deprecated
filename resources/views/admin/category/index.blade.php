@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header bg-dark text-light">카테고리</div>
+                <div class="card-header bg-dark text-light">카테고리 - Index</div>
 
                 <div class="card-body">
                     <table class="table table-hover border-bottom">
