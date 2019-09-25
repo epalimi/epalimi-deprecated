@@ -31,7 +31,7 @@
         right: 0;
         bottom: 0;
         z-index: -50;
-        background-color: rgba(0, 0, 0, .5);
+        background-color: rgba(0, 0, 0, .65);
     }
 
 </style>
@@ -56,7 +56,7 @@
     <div>
         <div class="d-flex justify-content-center align-items-center mb-4">
             <img src="{{ asset('svg/favicon.svg') }}" style="width:80px; height:80px;">
-            <span class="font-weight-bold ml-3" style="font-size:2.5rem;">EP Alimi</span>
+            <span class="font-weight-bold ml-3" style="font-size:2.5rem;">EP ALIMI</span>
         </div>
 
         <div>
