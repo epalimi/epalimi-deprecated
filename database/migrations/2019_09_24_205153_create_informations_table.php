@@ -26,7 +26,9 @@ class CreateInformationsTable extends Migration
             $table->time('end_time')->nullable(); // 운영시간 - 종료
             $table->unsignedBigInteger('category_id')->nullable(); // 카테고리 ID
             $table->timestamps();
-            // foreign 키 선언
+        });
+
+        Schema::table('informations', function (Blueprint $table) {
             $table->foreign('category_id')
                 ->references('id')->on('categories')
                 ->onDelete('set null');
