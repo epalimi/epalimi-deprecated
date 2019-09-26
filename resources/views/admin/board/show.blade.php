@@ -14,10 +14,12 @@
                         <span class="d-block">{{ $board->title }}</span>
                     </div>
 
+                    <a class="btn btn-outline-secondary mb-3 w-100" href="{{ route('admin.board.article.index', ['board' => $board]) }}">해당 게시글 목록</a>
+
                     <div class="btn-group mx-auto d-flex" role="group">
                         <a class="btn btn-secondary" href="{{ route('admin.board.index') }}">목록</a>
                         <a class="btn btn-secondary" href="{{ route('admin.board.edit', ['board' => $board]) }}">수정</a>
-                        <a class="btn btn-secondary" href="#" style="cursor: pointer;" onclick="confirmFormSubmit('#deleteForm', '정말 삭제하시겠습니까?\n속한 글들 또한 모두 삭제됩니다.')">삭제</a>
+                        <a class="btn btn-secondary" href="#" style="cursor: pointer;" onclick="confirmFormSubmit('#deleteForm', '정말 삭제하시겠습니까?\n속한 게시글들 또한 모두 삭제됩니다.')">삭제</a>
                     </div>
                 </div>
             </div>

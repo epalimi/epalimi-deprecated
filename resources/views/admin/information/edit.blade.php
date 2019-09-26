@@ -81,7 +81,7 @@
                                 </div>
                                 <div class="mb-4">
                                     <p class="font-weight-bold mb-0">링크</p>
-                                    <input class="form-control" type="text" name="link" placeholder="외부링크" value="{{ $information->link }}">
+                                    <input class="form-control" type="url" name="link" placeholder="외부링크" value="{{ $information->link }}">
                                     <small class="form-text text-muted">
                                         선택 항목입니다.
                                     </small>

@@ -5,50 +5,49 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header bg-dark text-light">게시판 - Index</div>
+                <div class="card-header bg-dark text-light">게시글 - Index</div>
 
                 <div class="card-body">
+                    <div class="font-weight-bold mb-2">게시판: {{ $board->title }}</div>
                     <table class="table table-hover border-bottom">
                         <thead class="thead-light">
                             <tr>
                                 <th scope="col">고유 ID</th>
-                                <th scope="col">이름</th>
-                                <th scope="col">글 개수</th>
+                                <th scope="col">제목</th>
                                 <th scope="col">바로가기</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @if ($boards->count() > 0)
-                            @foreach ($boards as $board)
+                            @if ($articles->count() > 0)
+                            @foreach ($articles as $article)
                             <tr>
-                                <td>{{ $board->id }}</td>
+                                <td>{{ $article->id }}</td>
                                 <td>
-                                    <a href="{{ route('admin.board.show', ['board' => $board]) }}">{{ $board->title }}</a>
+                                    <a href="{{ route('admin.board.article.show', ['board' => $board, 'article' => $article]) }}">{{ $article->title }}</a>
                                 </td>
-                                <td>미구현</td>
                                 <td>
-                                    <a href="#" onclick="confirmFormSubmit('#deleteForm{{ $board->id }}', '정말 삭제하시겠습니까?\n속한 게시글들 또한 모두 삭제됩니다.')">
+                                    <a href="#" onclick="confirmFormSubmit('#deleteForm{{ $article->id }}', '정말 삭제하시겠습니까?')">
                                         <img src="{{ asset('svg/delete.svg') }}" style="width:22px; height:22px;">
                                     </a>
-                                    <form id="deleteForm{{ $board->id }}" class="d-none" action="{{ route('admin.board.destroy', ['board' => $board]) }}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                    </form>
                                 </td>
+                                <form id="deleteForm{{ $article->id }}" class="d-none" action="{{ route('admin.board.article.destroy', ['board' => $board, 'article' => $article]) }}" method="POST">
+                                    @csrf
+                                    @method('DELETE')
+                                </form>
                             </tr>
                             @endforeach
                             @else
                             <tr>
-                                <td colspan="4">게시판이 없습니다!</td>
+                                <td colspan="4">게시글이 없습니다!</td>
                             </tr>
                             @endif
                         </tbody>
                     </table>
                     <div class="d-flex justify-content-center">
-                        {{ $boards->links() }}
+                        {{ $articles->links() }}
                     </div>
                     <div class="d-flex">
-                        <a class=" btn btn-secondary ml-auto" href="{{ route('admin.board.create') }}">새로 만들기</a>
+                        <a class="btn btn-secondary ml-auto" href="{{ route('admin.board.article.create', ['board' => $board]) }}">새로 만들기</a>
                     </div>
                 </div>
             </div>

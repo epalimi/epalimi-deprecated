@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Board extends Model
+class Article extends Model
 {
     /**
      * The attributes that are mass assignable.
@@ -12,16 +12,17 @@ class Board extends Model
      * @var array
      */
     protected $fillable = [
-        'title',
+        'title', 'description', 'thumb',
+        'is_external', 'external_link', 'board_id',
     ];
 
     /**
-     * Get articles of category.
+     * Get board of infomation.
      *
      * @return Collection
      */
-    public function articles()
+    public function board()
     {
-        return $this->hasMany(Article::class);
+        return $this->belongsTo(Board::class);
     }
 }

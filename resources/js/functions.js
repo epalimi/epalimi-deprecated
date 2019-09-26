@@ -3,3 +3,7 @@ window.confirmFormSubmit = function (form, message) {
         $(form).submit();
     }
 }
+
+window.toggleDisable = function (target) {
+    $(target).attr('disabled', !($(target).attr('disabled')));
+}

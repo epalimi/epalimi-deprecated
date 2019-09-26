@@ -98,6 +98,7 @@ class BoardController extends Controller
      */
     public function destroy(Board $board)
     {
+        $board->articles()->delete();
         $board->delete();
         return redirect(route('admin.board.index'));
     }

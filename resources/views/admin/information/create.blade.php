@@ -80,7 +80,7 @@
                                 </div>
                                 <div class="mb-4">
                                     <p class="font-weight-bold mb-0">링크</p>
-                                    <input class="form-control" type="text" name="link" placeholder="외부링크" value="{{ old('link') }}">
+                                    <input class="form-control" type="url" name="link" placeholder="외부링크" value="{{ old('link') }}">
                                     <small class="form-text text-muted">
                                         선택 항목입니다.
                                     </small>
@@ -136,7 +136,10 @@
                                 </div>
                             </div>
                         </div>
-                        <input class="btn btn-dark w-100" type="submit" value="만들기">
+                        <div class="btn-group mx-auto d-flex" role="group">
+                            <input class="btn btn-secondary" type="submit" value="만들기">
+                            <a class="btn btn-secondary" href="{{ route('admin.information.index') }}">취소</a>
+                        </div>
                     </form>
                 </div>
             </div>

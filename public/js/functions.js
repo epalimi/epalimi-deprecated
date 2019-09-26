@@ -99,6 +99,10 @@ window.confirmFormSubmit = function (form, message) {
   }
 };
 
+window.toggleDisable = function (target) {
+  $(target).attr('disabled', !$(target).attr('disabled'));
+};
+
 /***/ }),
 
 /***/ 1:

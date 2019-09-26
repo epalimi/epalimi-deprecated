@@ -59,7 +59,7 @@
             <span class="font-weight-bold ml-3" style="font-size:2.5rem;">EP ALIMI</span>
         </div>
 
-        <div>
+        <div class="d-flex justify-content-center">
             <a href="#">홈</a>
             @foreach (App\Category::all() as $category)
             <a href="#">{{ $category->title }}</a>
