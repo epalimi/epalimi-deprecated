@@ -18,8 +18,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @if ($categories->count() > 0)
-                            @foreach ($categories as $category)
+                            @forelse ($categories as $category)
                             <tr>
                                 <td>{{ $category->id }}</td>
                                 <td>
@@ -38,12 +37,11 @@
                                     @endif
                                 </td>
                             </tr>
-                            @endforeach
-                            @else
+                            @empty
                             <tr>
                                 <td colspan="4">카테고리가 없습니다!</td>
                             </tr>
-                            @endif
+                            @endforelse
                         </tbody>
                     </table>
                     <div class="d-flex justify-content-center">

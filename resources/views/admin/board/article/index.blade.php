@@ -18,8 +18,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @if ($articles->count() > 0)
-                            @foreach ($articles as $article)
+                            @forelse ($articles as $article)
                             <tr>
                                 <td>{{ $article->id }}</td>
                                 <td>
@@ -35,12 +34,11 @@
                                     @method('DELETE')
                                 </form>
                             </tr>
-                            @endforeach
-                            @else
+                            @empty
                             <tr>
                                 <td colspan="4">게시글이 없습니다!</td>
                             </tr>
-                            @endif
+                            @endforelse
                         </tbody>
                     </table>
                     <div class="d-flex justify-content-center">

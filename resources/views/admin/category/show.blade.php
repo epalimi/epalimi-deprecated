@@ -20,14 +20,18 @@
                             <span class="text-muted ml-auto">총 {{ $category->informations->count() }} 개</span>
                         </div>
                         <ul class="list-group">
-                            @foreach ($informations as $info)
+                            @forelse ($informations as $info)
                             <li class="list-group-item">
                                 <a class="stretched-link d-block" href="{{ route('admin.information.show', ['information' => $info]) }}">
                                     {{ $info->title }}
                                 </a>
                                 <span class="text-muted">{{ data_get($info, 'location', '장소 없음') }} - {{ data_get($info, 'phone', '전화 없음') }}</span>
                             </li>
-                            @endforeach
+                            @empty
+                            <li class="list-group-item">
+                                <span class="text-muted">해당 인포메이션이 없습니다.</span>
+                            </li>
+                            @endforelse
                             <div class="d-flex justify-content-center">
                                 {{ $informations->links() }}
                             </div>

@@ -18,8 +18,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @if ($informations->count() > 0)
-                            @foreach ($informations as $info)
+                            @forelse ($informations as $info)
                             <tr>
                                 <td>{{ $info->id }}</td>
                                 <td>{{ $info->category->title }}</td>
@@ -36,12 +35,11 @@
                                     @method('DELETE')
                                 </form>
                             </tr>
-                            @endforeach
-                            @else
+                            @empty
                             <tr>
                                 <td colspan="4">인포메이션이 없습니다!</td>
                             </tr>
-                            @endif
+                            @endforelse
                         </tbody>
                     </table>
                     <div class="d-flex justify-content-center">

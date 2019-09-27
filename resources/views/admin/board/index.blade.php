@@ -18,8 +18,7 @@
                             </tr>
                         </thead>
                         <tbody>
-                            @if ($boards->count() > 0)
-                            @foreach ($boards as $board)
+                            @forelse ($boards as $board)
                             <tr>
                                 <td>{{ $board->id }}</td>
                                 <td>
@@ -36,12 +35,11 @@
                                     </form>
                                 </td>
                             </tr>
-                            @endforeach
-                            @else
+                            @empty
                             <tr>
                                 <td colspan="4">게시판이 없습니다!</td>
                             </tr>
-                            @endif
+                            @endforelse
                         </tbody>
                     </table>
                     <div class="d-flex justify-content-center">
