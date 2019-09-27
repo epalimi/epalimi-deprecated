@@ -27,7 +27,7 @@
                             <div class="mb-4">
                                 <p class="font-weight-bold mb-0">외부 링크</p>
                                 @if ($article->is_external)
-                                <span class="d-block">{{ data_get($article, 'external_link', '외부 리다이렉트가 활성화 되어있지만, 등록된 링크가 없습니다.') }}</span>
+                                <span class="d-block {{ $article->external_link == null ? 'text-danger' : '' }}">{{ data_get($article, 'external_link', '외부 리다이렉트가 활성화 되어있지만, 등록된 링크가 없습니다.') }}</span>
                                 @else
                                 <span class="d-block">외부 리다이렉트가 비활성화 상태입니다.</span>
                                 @endif

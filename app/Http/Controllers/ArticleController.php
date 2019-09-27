@@ -13,7 +13,7 @@ class ArticleController extends Controller
         'title' => 'required',
         'description' => 'required',
         'thumb' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
-        'external_link' => 'nullable|url',
+        'external_link' => 'nullable|required_with:is_external|url',
     ];
 
     /**

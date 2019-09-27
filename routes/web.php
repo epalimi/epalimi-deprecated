@@ -42,9 +42,8 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
 
 // 메인 라우트 (일반적인 유저들이 접근하는 라우트)
 Route::name('main.')->group(function () {
-    Route::get('/home', function () {
-        $informations = App\Information::all();
-        return response()->json($informations);
-        return view('home');
+    Route::get('/test', function () {
+        $boards = App\Board::all();
+        return view('main.home', compact('boards'));
     })->name('home');
 });
