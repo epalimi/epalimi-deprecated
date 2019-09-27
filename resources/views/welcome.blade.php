@@ -42,7 +42,7 @@
     @if (Route::has('login'))
     <div class="position-absolute" style="top:10px; right:15px">
         @auth
-        <a href="{{ url('/') }}">홈</a>
+        <a href="{{ route('main.home') }}">홈</a>
         @else
         <a href="{{ route('login') }}">로그인</a>
 
