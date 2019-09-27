@@ -45,7 +45,7 @@
                     <div class="dropdown-menu dropdown-menu-right">
                         <h6 class="dropdown-header">게시판 목록</h6>
                         @foreach (App\Board::all() as $board)
-                        <a class="dropdown-item" href="{{ url('/home#'.$board->id) }}">{{ $board->title }}</a>
+                        <a class="dropdown-item" href="{{ route('main.home').'#'.$board->id }}">{{ $board->title }}</a>
                         @endforeach
                     </div>
                 </li>
