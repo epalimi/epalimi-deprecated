@@ -39,19 +39,9 @@
 
 @section('body')
 <div class="position-relative d-flex justify-content-center align-items-center" style="height:100vh;">
-    @if (Route::has('login'))
     <div class="position-absolute" style="top:10px; right:15px">
-        @auth
         <a href="{{ route('main.home') }}">홈</a>
-        @else
-        <a href="{{ route('login') }}">로그인</a>
-
-        @if (Route::has('register'))
-        <a href="{{ route('register') }}">회원가입</a>
-        @endif
-        @endauth
     </div>
-    @endif
 
     <div>
         <div class="d-flex justify-content-center align-items-center mb-4">
@@ -60,10 +50,14 @@
         </div>
 
         <div class="d-flex justify-content-center">
-            <a href="#">홈</a>
+            <a href="{{ route('main.home') }}">홈</a>
             @foreach (App\Category::all() as $category)
             <a href="#">{{ $category->title }}</a>
             @endforeach
+        </div>
+
+        <div class="position-absolute" style="bottom:10px; left:15px;">
+            <a href="{{ route('login') }}">관리자 로그인</a>
         </div>
     </div>
 
