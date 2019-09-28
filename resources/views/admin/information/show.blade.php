@@ -15,6 +15,10 @@
                                 <span class="d-block">{{ $information->category->title }}</span>
                             </div>
                             <div class="mb-4">
+                                <p class="font-weight-bold mb-0">주최자</p>
+                                <span class="d-block">{{ $information->organization }}</span>
+                            </div>
+                            <div class="mb-4">
                                 <p class="font-weight-bold mb-0">제목</p>
                                 <span class="d-block">{{ $information->title }}</span>
                             </div>
@@ -28,14 +32,6 @@
                             </div>
                         </div>
                         <div class="w-50">
-                            <div class="mb-4">
-                                <p class="font-weight-bold mb-0">장소</p>
-                                <span class="d-block">{{ data_get($information, 'location', '없음') }}</span>
-                            </div>
-                            <div class="mb-4">
-                                <p class="font-weight-bold mb-0">안내 전화</p>
-                                <span class="d-block">{{ data_get($information, 'phone', '없음') }}</span>
-                            </div>
                             <div class="mb-4">
                                 <p class="font-weight-bold mb-0">링크</p>
                                 <span class="d-block">{{ data_get($information, 'link', '없음') }}</span>

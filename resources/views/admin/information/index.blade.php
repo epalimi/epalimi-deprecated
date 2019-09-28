@@ -13,6 +13,7 @@
                             <tr>
                                 <th scope="col">고유 ID</th>
                                 <th scope="col">카테고리</th>
+                                <th scope="col">주최자</th>
                                 <th scope="col">제목</th>
                                 <th scope="col">바로가기</th>
                             </tr>
@@ -22,6 +23,7 @@
                             <tr>
                                 <td>{{ $info->id }}</td>
                                 <td>{{ $info->category->title }}</td>
+                                <td>{{ $info->organization }}</td>
                                 <td>
                                     <a href="{{ route('admin.information.show', ['information' => $info]) }}">{{ $info->title }}</a>
                                 </td>
@@ -37,7 +39,7 @@
                             </tr>
                             @empty
                             <tr>
-                                <td colspan="4">인포메이션이 없습니다!</td>
+                                <td colspan="5">인포메이션이 없습니다!</td>
                             </tr>
                             @endforelse
                         </tbody>

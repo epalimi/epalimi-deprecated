@@ -57,9 +57,8 @@ class InformationController extends Controller
 
         $id = Information::create([
             'title' => request('title'),
-            'location' => request('location'),
+            'organization' => request('organization'),
             'thumb' => $thumb_path,
-            'phone' => request('phone'),
             'link' => request('link'),
             'start_date' => request('start_date'),
             'end_date' => request('end_date'),
@@ -113,9 +112,8 @@ class InformationController extends Controller
 
         $information->update([
             'title' => request('title'),
-            'location' => request('location'),
+            'organization' => request('organization'),
             'thumb' => $thumb_path,
-            'phone' => request('phone'),
             'link' => request('link'),
             'start_date' => request('start_date'),
             'end_date' => request('end_date'),

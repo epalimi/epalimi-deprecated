@@ -16,9 +16,8 @@ class CreateInformationsTable extends Migration
         Schema::create('informations', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('title'); // 제목
-            $table->string('location')->nullable(); // 장소
+            $table->string('organization')->nullable(); // 주최자
             $table->string('thumb')->nullable(); // 대표사진(썸네일)
-            $table->string('phone')->nullable(); // 안내전화 번호
             $table->string('link')->nullable(); // 외부링크
             $table->dateTime('start_date')->nullable(); // 기간 - 시작
             $table->dateTime('end_date')->nullable(); // 기간 - 종료

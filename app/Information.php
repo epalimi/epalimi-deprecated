@@ -19,8 +19,8 @@ class Information extends Model
      * @var array
      */
     protected $fillable = [
-        'title', 'location', 'thumb', 'phone', 'link',
-        'start_date', 'end_date',
+        'title', 'thumb', 'link',
+        'start_date', 'end_date', 'organization',
         'start_time', 'end_time', 'category_id',
     ];
 

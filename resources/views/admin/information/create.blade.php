@@ -29,6 +29,18 @@
                                     @enderror
                                 </div>
                                 <div class="mb-4">
+                                    <p class="font-weight-bold mb-0">주최자</p>
+                                    <input class="form-control" type="text" name="organization" placeholder="주최자" value="{{ old('organization') }}">
+                                    <small class="form-text text-muted">
+                                        선택 항목입니다.
+                                    </small>
+                                    @error('organization')
+                                    <div class="alert alert-danger" role="alert">
+                                        {{ $message }}
+                                    </div>
+                                    @enderror
+                                </div>
+                                <div class="mb-4">
                                     <p class="font-weight-bold mb-0">제목</p>
                                     <input class="form-control" type="text" name="title" placeholder="제목" value="{{ old('title') }}">
                                     <small class="form-text text-muted">
@@ -54,30 +66,6 @@
                                 </div>
                             </div>
                             <div class="w-50 ml-1">
-                                <div class="mb-4">
-                                    <p class="font-weight-bold mb-0">장소</p>
-                                    <input class="form-control" type="text" name="location" placeholder="장소" value="{{ old('location') }}">
-                                    <small class="form-text text-muted">
-                                        선택 항목입니다.
-                                    </small>
-                                    @error('location')
-                                    <div class="alert alert-danger" role="alert">
-                                        {{ $message }}
-                                    </div>
-                                    @enderror
-                                </div>
-                                <div class="mb-4">
-                                    <p class="font-weight-bold mb-0">안내 전화</p>
-                                    <input class="form-control" type="text" name="phone" placeholder="문의전화" value="{{ old('phone') }}">
-                                    <small class="form-text text-muted">
-                                        선택 항목입니다.
-                                    </small>
-                                    @error('phone')
-                                    <div class="alert alert-danger" role="alert">
-                                        {{ $message }}
-                                    </div>
-                                    @enderror
-                                </div>
                                 <div class="mb-4">
                                     <p class="font-weight-bold mb-0">링크</p>
                                     <input class="form-control" type="url" name="link" placeholder="외부링크" value="{{ old('link') }}">
