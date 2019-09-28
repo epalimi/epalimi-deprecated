@@ -34,7 +34,7 @@
                                 </div>
                                 <div class="mb-4">
                                     <p class="font-weight-bold mb-0">설명</p>
-                                    <input class="form-control" type="text" name="description" placeholder="설명" value="{{ $article->description }}">
+                                    <textarea class="form-control" name="description" placeholder="설명" rows="10">{{ $article->description }}</textarea>
                                     <small class="form-text text-muted">
                                         필수 입력 항목입니다.
                                     </small>
