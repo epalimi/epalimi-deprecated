@@ -11,6 +11,7 @@
 |
 */
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 // 루트페이지
@@ -42,8 +43,15 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
 
 // 메인 라우트 (일반적인 유저들이 접근하는 라우트)
 Route::name('main.')->group(function () {
-    Route::get('/test', function () {
-        $boards = App\Board::all();
-        return view('main.home', compact('boards'));
+    // 카테고리
+    Route::get('/category/{category}', function (App\Category $category) {
+        $informations = $category->informations()->paginate(9);
+        return view('main.category', ['category' => $category, 'informations' => $informations]);
+    })->name('category');
+
+    // 테스트
+    Route::get('/test', function (Request $request) {
+        $articles = App\Article::paginate(9);
+        return view('main.home', compact('articles'));
     })->name('home');
 });

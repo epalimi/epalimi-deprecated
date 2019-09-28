@@ -12,7 +12,7 @@ class InformationController extends Controller
     private $rule = [
         'title' => 'required',
         'link' => 'nullable|url',
-        'thumb' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+        'thumb' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:8192',
         'start_date' => 'nullable|date',
         'end_date' => 'nullable|date',
         'start_time' => 'nullable|date_format:H:i',
