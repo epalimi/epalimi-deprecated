@@ -37,7 +37,7 @@
                                 @if ($article->thumb == null)
                                 <span>대표사진이 없습니다.</span>
                                 @else
-                                <img style="width:90%;" src="{{ url($article->thumb) }}">
+                                <img style="width:90%;" src="{{ url('storage'.$article->thumb) }}">
                                 @endif
                             </div>
                             <div class="mb-4">
