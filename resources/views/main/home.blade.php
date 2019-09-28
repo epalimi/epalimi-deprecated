@@ -45,7 +45,7 @@
             </div>
             <h4 class="one-line mb-3">{{ $article->title }}</h4>
             <p class="multi-line text-muted mb-auto">{{ $article->description }}</p>
-            <hr class="w-100">
+            <hr class="w-100 my-3">
             <div class="d-flex">
                 <a class="btn btn-outline-secondary stretched-link ml-auto" href="{{ $article->is_external ? $article->external_link : '#' }}" target="_blink">
                     {{ $article->is_external ? '외부 링크' : '자세히 보기' }}

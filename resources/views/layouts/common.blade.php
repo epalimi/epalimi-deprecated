@@ -11,8 +11,8 @@
 
 @section('body')
 {{-- 상단 네비게이션 바 --}}
-<nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-secondary shadow-sm">
-    <div class="container-fluid">
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark shadow-sm">
+    <div class="container">
         {{-- 브랜드 로고 --}}
         <a class="navbar-brand" href="{{ url('/') }}">
             은평알리미
