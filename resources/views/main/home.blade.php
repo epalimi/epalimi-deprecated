@@ -41,7 +41,7 @@
         @forelse ($board->articles as $article)
         <div class="col-sm-4 mt-3 p-2">
             <div class="embed-responsive embed-responsive-16by9 mb-4 border rounded shadow-sm" style="background-color: #ededed;">
-                <img class="embed-responsive-item" style="object-fit: contain;" src="{{ $article->thumb != null ? url('storage'.$article->thumb) : asset('svg/placeholder3x2.svg') }}">
+                <img class="embed-responsive-item" style="object-fit: contain;" src="{{ $article->thumb != null ? url($article->thumb) : asset('svg/placeholder3x2.svg') }}">
             </div>
             <h4 class="one-line mb-3">{{ $article->title }}</h4>
             <p class="multi-line text-muted mb-auto">{{ $article->description }}</p>
