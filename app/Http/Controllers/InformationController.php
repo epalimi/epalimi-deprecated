@@ -15,8 +15,6 @@ class InformationController extends Controller
         'thumb' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:8192',
         'start_date' => 'required|date',
         'end_date' => 'required|date',
-        'start_time' => 'nullable|date_format:H:i',
-        'end_time' => 'nullable|date_format:H:i',
     ];
 
     /**

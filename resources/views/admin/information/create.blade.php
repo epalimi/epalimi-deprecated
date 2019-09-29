@@ -80,7 +80,7 @@
                                 </div>
                                 <div class="mb-4">
                                     <p class="font-weight-bold mb-0">기간</p>
-                                    <input class="form-control" type="date" name="start_date" placeholder="시작날짜" value="{{ old('start_date') }}">
+                                    <input class="form-control" type="date" name="start_date" placeholder="시작날짜" value="{{ old('start_date', date('Y-m-d')) }}">
                                     <small class="form-text text-muted">
                                         필수 입력 항목입니다.
                                     </small>
@@ -90,7 +90,7 @@
                                     </div>
                                     @enderror
                                     ~
-                                    <input class="form-control" type="date" name="end_date" placeholder="종료날짜" value="{{ old('end_date') }}">
+                                    <input class="form-control" type="date" name="end_date" placeholder="종료날짜" value="{{ old('end_date', date('Y-m-d')) }}">
                                     <small class="form-text text-muted">
                                         필수 입력 항목입니다.
                                     </small>
@@ -102,7 +102,7 @@
                                 </div>
                                 <div class="mb-4">
                                     <p class="font-weight-bold mb-0">운영 시간</p>
-                                    <input class="form-control" type="time" name="start_time" placeholder="영업시작시간" value="{{ old('start_time') }}">
+                                    <input class="form-control" type="time" name="start_time" value="{{ old('start_time') }}">
                                     <small class="form-text text-muted">
                                         선택 항목입니다.
                                     </small>
@@ -112,7 +112,7 @@
                                     </div>
                                     @enderror
                                     ~
-                                    <input class="form-control" type="time" name="end_time" placeholder="영업종료시간" value="{{ old('end_time') }}">
+                                    <input class="form-control" type="time" name="end_time" value="{{ old('end_time') }}">
                                     <small class="form-text text-muted">
                                         선택 항목입니다.
                                     </small>

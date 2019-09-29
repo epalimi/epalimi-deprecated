@@ -103,7 +103,7 @@
                                 </div>
                                 <div class="mb-4">
                                     <p class="font-weight-bold mb-0">운영 시간</p>
-                                    <input class="form-control" type="time" name="start_time" placeholder="영업시작시간" value="{{ $information->start_time }}">
+                                    <input class="form-control" type="time" name="start_time" value="{{ $information->start_time }}">
                                     <small class="form-text text-muted">
                                         선택 항목입니다.
                                     </small>
@@ -113,7 +113,7 @@
                                     </div>
                                     @enderror
                                     ~
-                                    <input class="form-control" type="time" name="end_time" placeholder="영업종료시간" value="{{ $information->end_time }}">
+                                    <input class="form-control" type="time" name="end_time" value="{{ $information->end_time }}">
                                     <small class="form-text text-muted">
                                         선택 항목입니다.
                                     </small>
@@ -130,11 +130,6 @@
                             <a class="btn btn-secondary" href="{{ route('admin.information.show', ['information' => $information]) }}">취소</a>
                         </div>
                     </form>
-                    @if ($errors->any())
-                    @foreach ($errors->all() as $error)
-                    {{$error}}
-                    @endforeach
-                    @endif
                 </div>
             </div>
         </div>
