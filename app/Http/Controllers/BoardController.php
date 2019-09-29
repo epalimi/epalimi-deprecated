@@ -18,7 +18,7 @@ class BoardController extends Controller
      */
     public function index()
     {
-        $boards = Board::paginate(10);
+        $boards = Board::orderBy('created_at', 'desc')->paginate(10);
 
         return view('admin.board.index', ['boards' => $boards]);
     }
