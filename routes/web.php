@@ -49,6 +49,18 @@ Route::name('main.')->group(function () {
         return view('main.category', ['category' => $category, 'informations' => $informations]);
     })->name('category');
 
+    // 게시판
+    Route::get('/board/{board}', function (App\Board $board) {
+        $articles = $board->articles()->paginate(8);
+        return view('main.board', ['board' => $board, 'articles' => $articles]);
+    })->name('board');
+
+    // 게시글
+    Route::get('/article/{article}', function (App\Article $article) {
+        $previews = App\Article::where('board_id', $article->board->id)->take(4)->get();
+        return view('main.article', ['article' => $article, 'previews' => $previews]);
+    })->name('article');
+
     // 테스트
     Route::get('/test', function (Request $request) {
         $articles = App\Article::paginate(9);

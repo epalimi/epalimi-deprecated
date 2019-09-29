@@ -65,7 +65,7 @@
         <div class="col-12">
             <div class="head">
                 <div class="head-title">
-                    <span class="font-weight-bold" style="font-size: 1.2rem;">{{ $category->title }}</span>
+                    <span class="font-weight-bold" style="font-size: 1.2rem;">카테고리</span>
                 </div>
                 <hr>
                 <ul class="nav mb-5">
@@ -81,7 +81,7 @@
                     @endforeach
                 </ul>
             </div>
-            <div class="informations card-columns">
+            <div class="card-columns">
                 @forelse ($informations as $information)
                 <div id="{{ $information->id }}" class="card rounded-top">
                     <img class="card-img-top" src="{{ $information->thumb != null ? url('storage/'.$information->thumb) : asset('svg/placeholder3x2.svg') }}">
