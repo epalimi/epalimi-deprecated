@@ -2,7 +2,7 @@
     <div class="embed-responsive embed-responsive-4by3">
         <img class="embed-responsive-item" src="{{ $article->thumb != null ? url('storage/'.$article->thumb) : asset('svg/placeholder3x2.svg') }}" style="object-fit: cover;">
     </div>
-    <div class="d-flex flex-column p-2 mb-3">
+    <div class="d-flex flex-column flex-grow-1 p-2 mb-3">
         <div class="board text-muted mt-3" style="font-size: 0.75rem;">{{ $article->board->title }}</div>
         <div class="title font-weight-bold mb-4" style="font-size: 1.1rem;">{{ $article->title }}</div>
         <div class="description text-muted" style="font-size:0.8rem;">
