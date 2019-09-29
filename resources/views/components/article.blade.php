@@ -5,7 +5,7 @@
     <div class="d-flex flex-column flex-grow-1 p-2 mb-3">
         <div class="board text-muted mt-3" style="font-size: 0.75rem;">{{ $article->board->title }}</div>
         <div class="title font-weight-bold mb-4" style="font-size: 1.1rem;">{{ $article->title }}</div>
-        <div class="description text-muted" style="font-size:0.8rem;">
+        <div class="description text-muted mb-3" style="font-size:0.8rem;">
             {{ $article->description }}
         </div>
         @if ($article->is_external)
