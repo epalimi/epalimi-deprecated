@@ -9,7 +9,7 @@
             {{ $article->description }}
         </div>
         @if ($article->is_external)
-        <div class="external_link text-muted mt-3" style="font-size:0.8rem; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">
+        <div class="external_link text-muted mt-auto" style="font-size:0.8rem; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">
             <span>외부 링크: </span>
             <span class="btn-link">{{ $article->external_link }}</span>
         </div>
