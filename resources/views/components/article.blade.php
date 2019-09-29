@@ -6,10 +6,10 @@
         <div class="board text-muted mt-3" style="font-size: 0.75rem;">{{ $article->board->title }}</div>
         <div class="title font-weight-bold mb-4" style="font-size: 1.1rem;">{{ $article->title }}</div>
         <div class="description text-muted" style="font-size:0.8rem;">
-            {{ $article->description }}
+            {{!! nl2br($article->description) !!}}
         </div>
         @if ($article->is_external)
-        <div class="external_link text-muted mt-3" style="font-size:0.8rem;">
+        <div class="external_link text-muted mt-3" style="font-size:0.8rem; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">
             <span>외부 링크: </span>
             <span class="btn-link">{{ $article->external_link }}</span>
         </div>
