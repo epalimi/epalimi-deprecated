@@ -97,7 +97,7 @@
                         </div>
                         <hr class="m-0">
                         <div class="bottom px-3 py-2 d-flex" style="font-size:90%;">
-                            <span class="text-muted">{{ $information->organization }}</span>
+                            <span class="text-muted" style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">{{ $information->organization }}</span>
                             <span class="ml-auto">
                                 <a class="review-link stretched-link" href="#">
                                     <img src="{{ asset('svg/review.svg') }}" style="height:20px;">
