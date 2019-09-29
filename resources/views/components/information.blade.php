@@ -47,7 +47,7 @@
 {{-- 이미지 자세히보기 모달 --}}
 <div class="modal fade" id="imageDetailModal{{ $information->id }}" tabindex="-1" role="dialog" aria-hidden="true">
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
-        <div class="modal-content">
+        <div class="modal-content border-0">
             <div class="modal-header">
                 <h5 class="modal-title" id="imageDetailModalTitle{{ $information->id }}">이미지 자세히 보기</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -55,10 +55,9 @@
                 </button>
             </div>
             <div class="modal-body">
-                <img style="max-width: 100%" src="{{ $information->thumb != null ? url('storage/'.$information->thumb) : asset('svg/placeholder3x2.svg') }}">
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+                <div class="d-flex justify-content-center">
+                    <img style="max-width: 100%" src="{{ $information->thumb != null ? url('storage/'.$information->thumb) : asset('svg/placeholder3x2.svg') }}">
+                </div>
             </div>
         </div>
     </div>

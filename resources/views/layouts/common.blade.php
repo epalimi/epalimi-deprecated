@@ -2,17 +2,6 @@
 
 @push('styles')
 <style>
-    /* html,
-    body {
-        position: relative;
-    }
-
-    footer {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-    } */
-
     header .menu>a {
         position: relative;
         display: flex;
