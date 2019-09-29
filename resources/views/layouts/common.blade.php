@@ -2,6 +2,7 @@
 
 @push('styles')
 <style>
+    /* 헤더 */
     header .menu>a {
         position: relative;
         display: flex;
@@ -36,6 +37,59 @@
         padding: .6rem 1.25rem;
     }
 
+    header nav .menu {
+        position: static;
+        display: flex;
+        align-items: stretch;
+        margin: 0 auto;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        header nav .menu {
+            position: absolute;
+            flex-direction: column;
+            top: calc(100% + 5px);
+            max-height: 0;
+            width: 94%;
+            background-color: #f8f9fa;
+            z-index: 1000;
+            overflow: hidden;
+            transition: all 0.4s;
+        }
+
+        header nav .menu.open {
+            max-height: 200px;
+            border: 1px solid #dee2e6;
+        }
+
+        header nav .menu.open a {
+            padding: 0.5rem 1rem;
+            margin: 0;
+        }
+
+        header nav .menu.open a:hover {
+            background-color: rgba(0, 0, 0, .05);
+        }
+
+        header .menu>a:hover::after {
+            display: none;
+        }
+
+        .menu-toggle {
+            display: inline;
+        }
+    }
+
+    /* 메인 */
+    main {
+        min-height: 100vh;
+    }
+
+    /* 푸터 */
     .footer-links a {
         text-decoration: none;
         color: inherit;
@@ -46,53 +100,19 @@
         color: inherit;
     }
 
-    main {
-        min-height: 100vh;
-    }
-
 </style>
 @endpush
 
 @section('body')
-{{-- 상단 네비게이션 바 --}}
-<header class="shadow-sm">
-    <div class="container">
-        <nav class="d-flex">
-            <a href="{{ url('/') }}">
-                <img class="py-2 mr-3" src="{{ asset('svg/logo.svg') }}" style="width:100px;">
-            </a>
-            <div class="menu d-flex align-items-stretch mx-auto">
-                <a href="{{ route('main.category.index') }}">동네소식</a>
-                <a href="#">함께공모</a>
-                <a href="#">단체소식</a>
-                <a href="https://pf.kakao.com/_dBuWj" target="_blank">참여하기</a>
-            </div>
-        </nav>
-    </div>
-</header>
+{{-- 헤더 --}}
+@include('includes.header')
 
+{{-- 메인 --}}
 <main>
+    {{-- content 섹션 --}}
     @yield('content')
 </main>
 
-<footer class="text-light p-4" style="background-color: #636363;">
-    <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-8 mt-2">
-                <span style="font-size: 1rem;">은평알리미</span>
-                <span>wwww.epalimi.com</span>
-            </div>
-            <div class="col-12 col-md-4 mt-2">
-                <div class="footer-links">
-                    <a class="mr-3" href="#">ABOUT</a>
-                    <a class="mr-3" href="#">블로그</a>
-                    <a href="#">제휴/문의</a>
-                </div>
-            </div>
-            <div class="col-12 text-white-50 mt-2" style="font-size: 0.8rem;">
-                주소: 서울시 은평구 통일로 6848동 50플러스서부캠퍼스 3층 / TEL: 010-2354-8202 / Kakaotalk: 은평알리미 / 이메일주소: gongricoop@gmail.com
-            </div>
-        </div>
-    </div>
-</footer>
+{{-- 푸터 --}}
+@include('includes.footer')
 @endsection
