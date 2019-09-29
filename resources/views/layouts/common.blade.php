@@ -76,7 +76,7 @@
                 <a href="{{ route('main.category.index') }}">동네소식</a>
                 <a href="#">함께공모</a>
                 <a href="#">단체소식</a>
-                <a href="#">참여하기</a>
+                <a href="https://pf.kakao.com/_dBuWj" target="_blank">참여하기</a>
             </div>
         </nav>
     </div>

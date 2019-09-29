@@ -10,7 +10,7 @@
 <div class="container py-4">
     <div class="row">
         <div class="col-12">
-            아아
+            메인페이지(미구현)
         </div>
     </div>
 </div>
