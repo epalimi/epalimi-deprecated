@@ -14,10 +14,36 @@
         <div class="bottom px-3 py-2 d-flex" style="font-size:90%;">
             <span class="text-muted" style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">{{ $information->organization }}</span>
             <span class="ml-auto">
-                <a class="review-link stretched-link" href="#">
-                    <img src="{{ asset('svg/review.svg') }}" style="height:20px;">
+                @if ($information->link != null)
+                <a class="review-link stretched-link" href="{{ $information->link }}">
+                    <img src="{{ asset('svg/detail.svg') }}" style="height:20px;">
                 </a>
+                @else
+                <a class="review-link stretched-link" data-toggle="modal" data-target="#imageDetailModal{{ $information->id }}" style="cursor: pointer;">
+                    <img src="{{ asset('svg/detail.svg') }}" style="height:20px;">
+                </a>
+                @endif
             </span>
+        </div>
+    </div>
+</div>
+
+{{-- 이미지 자세히보기 모달 --}}
+<div class="modal fade" id="imageDetailModal{{ $information->id }}" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="imageDetailModalTitle{{ $information->id }}">이미지 자세히 보기</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <img style="max-width: 100%" src="{{ $information->thumb != null ? url('storage/'.$information->thumb) : asset('svg/placeholder3x2.svg') }}">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">닫기</button>
+            </div>
         </div>
     </div>
 </div>
