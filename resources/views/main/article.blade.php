@@ -62,12 +62,12 @@
                     <span class="font-weight-bold" style="font-size: 1rem;">{{ $article->title }}</span>
                     <span class="ml-auto text-muted" style="font-size:0.8rem;">{{ $article->board->title }}</span>
                 </div>
-                <div class="article-content px-5 py-4">
+                <div class="article-content px-4 py-4">
                     <div class="d-flex justify-content-center mb-4">
                         <img src="{{ $article->thumb != null ? url('storage/'.$article->thumb) : asset('svg/placeholder3x2.svg') }}" style="max-width: 100%;">
                     </div>
                     <div>
-                        {{ $article->description }}
+                        {!! nl2br(e($article->description)) !!}
                     </div>
                 </div>
             </div>
