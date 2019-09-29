@@ -11,9 +11,9 @@ class CategoryTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('categories')->insert([
-            'title' => '미분류',
-            'deletable' => false,
-        ]);
+        // DB::table('categories')->insert([
+        //     'title' => '미분류',
+        //     'deletable' => false,
+        // ]);
     }
 }
