@@ -25,6 +25,13 @@ class Information extends Model
     ];
 
     /**
+     * Specify date columns.
+     *
+     * @var array
+     */
+    protected $dates = ['start_date', 'end_date'];
+
+    /**
      * Get category of infomation.
      *
      * @return Collection

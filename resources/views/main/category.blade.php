@@ -87,9 +87,9 @@
                     <img class="card-img-top" src="{{ $information->thumb != null ? url('storage/'.$information->thumb) : asset('svg/placeholder3x2.svg') }}">
                     <div class="card-body">
                         <div class="duration p-3 text-white font-weight-bold" style="background-color: rgb(38, 73, 145);">
-                            <span>{{ $information->start_date }}</span>
+                            <span>{{ $information->start_date != null ? $information->start_date->format('Y.m.d') : '없음' }}</span>
                             ~
-                            <span>{{ $information->end_date }}</span>
+                            <span>{{ $information->end_date != null ? $information->start_date->format('Y.m.d') : '없음' }}</span>
                         </div>
                         <div class="p-3">
                             <span class="d-block mb-1" style="color:#9fa7ae; font-size:90%;">{{ $information->category->title }}</span>
