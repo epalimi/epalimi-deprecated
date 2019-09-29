@@ -49,8 +49,6 @@ class InformationController extends Controller
      */
     public function store(Request $request)
     {
-        dd(request()->all());
-
         request()->validate($this->rule);
 
         $thumb_path = request()->hasFile('thumb') ? request()->file('thumb')->store('information_thumb') : null;
