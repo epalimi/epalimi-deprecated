@@ -14,7 +14,7 @@
             <span class="btn-link">{{ $article->external_link }}</span>
         </div>
         @endif
-        <div class="create-at text-muted mt-2 ml-auto" style="font-size: 0.75rem;">
+        <div class="create-at text-muted {{ $article->is_external ? 'mt-2' : 'mt-auto' }} ml-auto" style="font-size: 0.75rem;">
             {{ $article->created_at }}
         </div>
     </div>
