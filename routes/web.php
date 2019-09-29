@@ -45,7 +45,7 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
 Route::name('main.')->group(function () {
     // 카테고리
     Route::get('/category/{category}', function (App\Category $category) {
-        $informations = $category->informations()->paginate(9);
+        $informations = $category->informations()->paginate(12);
         return view('main.category', ['category' => $category, 'informations' => $informations]);
     })->name('category');
 

@@ -33,7 +33,7 @@
                     <div class="dropdown-menu dropdown-menu-right">
                         <h6 class="dropdown-header">카테고리 목록</h6>
                         @foreach (App\Category::all() as $category)
-                        <a class="dropdown-item" href="#">{{ $category->title }}</a>
+                        <a class="dropdown-item" href="{{ route('main.category', ['category' => $category]) }}">{{ $category->title }}</a>
                         @endforeach
                     </div>
                 </li>
@@ -45,11 +45,13 @@
                     <div class="dropdown-menu dropdown-menu-right">
                         <h6 class="dropdown-header">게시판 목록</h6>
                         @foreach (App\Board::all() as $board)
-                        <a class="dropdown-item" href="{{ route('main.home').'#'.$board->id }}">{{ $board->title }}</a>
+                        <a class="dropdown-item" href="#">{{ $board->title }}</a>
                         @endforeach
                     </div>
                 </li>
             </ul>
+            {{-- 검색 --}}
+            {{-- (미구현) --}}
         </div>
     </div>
 </nav>

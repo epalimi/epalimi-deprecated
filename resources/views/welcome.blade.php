@@ -51,9 +51,7 @@
 
         <div class="d-flex justify-content-center">
             <a href="{{ route('main.home') }}">홈</a>
-            @foreach (App\Category::all() as $category)
-            <a href="#">{{ $category->title }}</a>
-            @endforeach
+            <a href="{{ route('main.category', ['category' => App\Category::first()]) }}">카테고리</a>
         </div>
 
         <div class="position-absolute" style="bottom:10px; left:15px;">
