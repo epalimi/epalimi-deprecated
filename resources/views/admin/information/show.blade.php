@@ -38,9 +38,9 @@
                             </div>
                             <div class="mb-4">
                                 <p class="font-weight-bold mb-0">기간</p>
-                                <span>{{ data_get($information, 'start_date', '없음') }}</span>
+                                <span>{{ $information->start_date }}</span>
                                 ~
-                                <span>{{ data_get($information, 'end_date', '없음') }}</span>
+                                <span>{{ $information->end_date }}</span>
                             </div>
                             <div class="mb-4">
                                 <p class="font-weight-bold mb-0">운영 시간</p>

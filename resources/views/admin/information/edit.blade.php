@@ -81,9 +81,9 @@
                                 </div>
                                 <div class="mb-4">
                                     <p class="font-weight-bold mb-0">기간</p>
-                                    <input class="form-control" type="date" name="start_date" placeholder="시작날짜" value="{{ $information->start_date }}">
+                                    <input class="form-control" type="date" name="start_date" placeholder="시작날짜" value="{{ $information->start_date->format('Y-m-d') }}">
                                     <small class="form-text text-muted">
-                                        선택 항목입니다.
+                                        필수 입력 항목입니다.
                                     </small>
                                     @error('start_date')
                                     <div class="alert alert-danger" role="alert">
@@ -91,9 +91,9 @@
                                     </div>
                                     @enderror
                                     ~
-                                    <input class="form-control" type="date" name="end_date" placeholder="종료날짜" value="{{ $information->end_date }}">
+                                    <input class="form-control" type="date" name="end_date" placeholder="종료날짜" value="{{ $information->end_date->format('Y-m-d') }}">
                                     <small class="form-text text-muted">
-                                        선택 항목입니다.
+                                        필수 입력 항목입니다.
                                     </small>
                                     @error('end_date')
                                     <div class="alert alert-danger" role="alert">
