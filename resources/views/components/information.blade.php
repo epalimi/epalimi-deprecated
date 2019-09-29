@@ -1,3 +1,19 @@
+@push('styles')
+<style>
+    .card {
+        border-radius: 0;
+        border: none;
+        padding: 0;
+        margin-bottom: 2.3rem !important;
+    }
+
+    .card .card-body {
+        padding: 0;
+    }
+
+</style>
+@endpush
+
 <div id="{{ $information->id }}" class="card rounded-top">
     <img class="card-img-top" src="{{ $information->thumb != null ? url('storage/'.$information->thumb) : asset('svg/placeholder3x2.svg') }}">
     <div class="card-body">

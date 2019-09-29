@@ -24,17 +24,6 @@
         }
     }
 
-    .card {
-        border-radius: 0;
-        border: none;
-        padding: 0;
-        margin-bottom: 1.25rem !important;
-    }
-
-    .card .card-body {
-        padding: 0;
-    }
-
 </style>
 @endpush
 
