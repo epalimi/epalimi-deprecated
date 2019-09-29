@@ -73,7 +73,7 @@
                 <img class="py-2 mr-3" src="{{ asset('svg/logo.svg') }}" style="width:100px;">
             </a>
             <div class="menu d-flex align-items-stretch mx-auto">
-                <a href="#">동네소식</a>
+                <a href="{{ route('main.category.index') }}">동네소식</a>
                 <a href="#">함께공모</a>
                 <a href="#">단체소식</a>
                 <a href="#">참여하기</a>

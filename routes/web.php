@@ -16,8 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 // 루트페이지
 Route::get('/', function () {
-    return view('welcome');
-});
+    return view('main.home');
+})->name('main.home');
 
 // 로그인(Auth) 라우트
 Auth::routes(['register' => false, 'reset' => false]);

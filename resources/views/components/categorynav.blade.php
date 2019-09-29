@@ -25,7 +25,7 @@
 
 <div>
     <div class="head-title">
-        <span class="font-weight-bold" style="font-size: 1.2rem;">카테고리</span>
+        <span class="font-weight-bold" style="font-size: 1.2rem;">동네소식</span>
     </div>
     <hr>
     <ul class="nav mb-5">
