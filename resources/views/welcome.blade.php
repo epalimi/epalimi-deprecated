@@ -40,18 +40,16 @@
 @section('body')
 <div class="position-relative d-flex justify-content-center align-items-center" style="height:100vh;">
     <div class="position-absolute" style="top:10px; right:15px">
-        <a href="{{ route('main.home') }}">홈</a>
     </div>
 
     <div>
         <div class="d-flex justify-content-center align-items-center mb-4">
             <img src="{{ asset('svg/favicon.svg') }}" style="width:80px; height:80px;">
-            <span class="font-weight-bold ml-3" style="font-size:2.5rem;">EP ALIMI</span>
+            <span class="font-weight-bold ml-3" style="font-size:2.5rem;">은평 알리미</span>
         </div>
 
         <div class="d-flex justify-content-center">
-            <a href="{{ route('main.home') }}">홈</a>
-            <a href="{{ route('main.category', ['category' => App\Category::first()]) }}">카테고리</a>
+            <a href="{{ route('main.category', ['category' => App\Category::first()]) }}">메인</a>
         </div>
 
         <div class="position-absolute" style="bottom:10px; left:15px;">

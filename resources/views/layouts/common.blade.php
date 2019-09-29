@@ -13,6 +13,36 @@
         width: 100%;
     } */
 
+    header .menu>a {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0 0.3rem;
+        margin: 0 1rem;
+        text-decoration: none;
+        color: #5e5e5e;
+        font-size: 1rem;
+        transition: all 0.4s;
+        font-weight: bold;
+    }
+
+    header .menu>a::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 0);
+        width: 0px;
+        height: 4px;
+        background-color: #fab23f;
+        transition: all 0.2s;
+    }
+
+    header .menu>a:hover::after {
+        width: 100%;
+    }
+
     .navbar {
         padding: .6rem 1.25rem;
     }
@@ -36,50 +66,21 @@
 
 @section('body')
 {{-- 상단 네비게이션 바 --}}
-<nav class="navbar navbar-expand-sm navbar-dark bg-dark shadow-sm">
+<header class="shadow-sm">
     <div class="container">
-        {{-- 브랜드 로고 --}}
-        <a class="navbar-brand" href="{{ url('/') }}">
-            은평알리미
-        </a>
-        {{-- 메뉴 토글 버튼 --}}
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContents">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        {{-- 네비게이션 컨텐츠 --}}
-        <div id="navbarContents" class="collapse navbar-collapse">
-            {{-- 오른쪽 아이템들 --}}
-            <ul class="navbar-nav ml-auto">
-                {{-- 카테고리 드랍다운 --}}
-                <li class="navbar-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-                        카테고리
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <h6 class="dropdown-header">카테고리 목록</h6>
-                        @foreach (App\Category::all() as $category)
-                        <a class="dropdown-item" href="{{ route('main.category', ['category' => $category]) }}">{{ $category->title }}</a>
-                        @endforeach
-                    </div>
-                </li>
-                {{-- 게시판 드랍다운 --}}
-                <li class="navbar-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
-                        게시판
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right">
-                        <h6 class="dropdown-header">게시판 목록</h6>
-                        @foreach (App\Board::all() as $board)
-                        <a class="dropdown-item" href="{{ route('main.board', ['board' => $board]) }}">{{ $board->title }}</a>
-                        @endforeach
-                    </div>
-                </li>
-            </ul>
-            {{-- 검색 --}}
-            {{-- (미구현) --}}
-        </div>
+        <nav class="d-flex">
+            <a href="{{ url('/') }}">
+                <img class="py-2 mr-3" src="{{ asset('svg/logo.svg') }}" style="width:100px;">
+            </a>
+            <div class="menu d-flex align-items-stretch mx-auto">
+                <a href="#">동네소식</a>
+                <a href="#">함께공모</a>
+                <a href="#">단체소식</a>
+                <a href="#">참여하기</a>
+            </div>
+        </nav>
     </div>
-</nav>
+</header>
 
 <main>
     @yield('content')

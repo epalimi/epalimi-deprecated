@@ -23,6 +23,6 @@ class Category extends Model
      */
     public function informations()
     {
-        return $this->hasMany(Information::class);
+        return $this->hasMany(Information::class)->orderBy('created_at', 'desc');
     }
 }

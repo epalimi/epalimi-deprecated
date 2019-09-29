@@ -44,12 +44,20 @@ Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
 // 메인 라우트 (일반적인 유저들이 접근하는 라우트)
 Route::name('main.')->group(function () {
     // 카테고리
+    Route::get('/category', function () {
+        $categories = App\Category::all();
+        return view('main.categoryIndex', ['categories' => $categories]);
+    })->name('category.index');
     Route::get('/category/{category}', function (App\Category $category) {
         $informations = $category->informations()->paginate(12);
         return view('main.category', ['category' => $category, 'informations' => $informations]);
     })->name('category');
 
     // 게시판
+    Route::get('/board', function () {
+        $boards = App\Board::all();
+        return view('main.boardIndex', ['boards' => $boards]);
+    })->name('board.index');
     Route::get('/board/{board}', function (App\Board $board) {
         $articles = $board->articles()->paginate(8);
         return view('main.board', ['board' => $board, 'articles' => $articles]);
@@ -57,13 +65,7 @@ Route::name('main.')->group(function () {
 
     // 게시글
     Route::get('/article/{article}', function (App\Article $article) {
-        $previews = App\Article::where('board_id', $article->board->id)->take(4)->get();
+        $previews = App\Article::where('board_id', $article->board->id)->orderBy('created_at', 'desc')->take(4)->get();
         return view('main.article', ['article' => $article, 'previews' => $previews]);
     })->name('article');
-
-    // 테스트
-    Route::get('/test', function (Request $request) {
-        $articles = App\Article::paginate(9);
-        return view('main.home', compact('articles'));
-    })->name('home');
 });
