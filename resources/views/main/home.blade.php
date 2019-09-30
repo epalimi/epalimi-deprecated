@@ -13,7 +13,7 @@
         width: 100%;
         height: 100%;
         padding: 3.5rem 2.5rem 1rem 2rem;
-        background-color: rgba(0, 0, 0, .6);
+        background-color: rgba(0, 0, 0, .75);
         color: white;
         line-height: 1.35;
     }
