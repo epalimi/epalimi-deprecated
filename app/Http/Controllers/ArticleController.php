@@ -12,7 +12,7 @@ class ArticleController extends Controller
     private $rule = [
         'title' => 'required',
         'description' => 'required',
-        'thumb' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg|max:8192',
+        'thumb' => 'nullable|image|mimes:jpeg,png,jpg,gif,svg',
         'external_link' => 'nullable|required_with:is_external|url',
     ];
 
