@@ -32,7 +32,7 @@
             <span class="ml-auto">
                 @if ($information->link != null)
                 <a class="review-link stretched-link" href="{{ $information->link }}" target="_blank">
-                    <img src="{{ asset('svg/detail.svg') }}" style="height:20px;">
+                    <img src="{{ asset('svg/link.svg') }}" style="height:20px;">
                 </a>
                 @else
                 <a class="review-link stretched-link" data-toggle="modal" data-target="#imageDetailModal{{ $information->id }}" style="cursor: pointer;">
