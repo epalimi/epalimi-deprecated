@@ -206,7 +206,7 @@
                         마을지원센터
                     </div>
                     <div class="organization-description" style="font-size:0.85rem;">행사, 활동을 검색해보세요.</div>
-                    <a class="stretched-link" href="#"></a>
+                    <a class="stretched-link" href="{{ route('main.group', ['query' => '은평구마을지원센터']) }}"></a>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3">
@@ -216,7 +216,7 @@
                         서부캠퍼스
                     </div>
                     <div class="organization-description" style="font-size:0.85rem;">행사, 교육을 검색해보세요.</div>
-                    <a class="stretched-link" href="#"></a>
+                    <a class="stretched-link" href="{{ route('main.group', ['query' => '50플러스서부캠퍼스']) }}"></a>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3">
@@ -226,7 +226,7 @@
                         갤러리
                     </div>
                     <div class="organization-description" style="font-size:0.85rem;">행사, 전시를 검색해보세요.</div>
-                    <a class="stretched-link" href="#"></a>
+                    <a class="stretched-link" href="{{ route('main.group', ['query' => '양천리갤러리']) }}"></a>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3">
@@ -236,7 +236,7 @@
                         방과후지원센터
                     </div>
                     <div class="organization-description" style="font-size:0.85rem;">행사, 활동을 검색해보세요.</div>
-                    <a class="stretched-link" href="#"></a>
+                    <a class="stretched-link" href="{{ route('main.group', ['query' => '구립은평마을방과후지원센터']) }}"></a>
                 </div>
             </div>
         </div>

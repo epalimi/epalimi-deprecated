@@ -54,6 +54,11 @@ Route::name('main.')->group(function () {
         $informations = $category->informations()->paginate(12);
         return view('main.category', ['category' => $category, 'informations' => $informations]);
     })->name('category');
+    // 카테고리 단체 모아보기
+    Route::get('/group/{query}', function ($query) {
+        $informations = App\Information::where('organization', $query)->orderBy('created_at', 'desc')->paginate(12);
+        return view('main.group', ['query' => $query, 'informations' => $informations]);
+    })->name('group');
 
     // 게시판
     Route::get('/board', function () {
