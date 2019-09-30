@@ -65,7 +65,7 @@
                             느린걸음<br>
                             보통날;
                         </div>
-                        <div class="mb-3" style="font-size: 14px; color: #979797;">
+                        <div class="mb-5" style="font-size: 14px; color: #979797;">
                             서울 은평 미래유산을 찾아<br>
                             2개월간 촬영하고 멋진 사진을 전시하게 위해<br>
                             1주일 단위로 모여 리뷰를 진행하신<br>
@@ -89,7 +89,7 @@
                             가을하늘에<br>
                             드러나다;
                         </div>
-                        <div class="mb-3" style="font-size: 14px; color: #979797;">
+                        <div class="mb-5" style="font-size: 14px; color: #979797;">
                             오래 살아왔기에,<br>
                             많은 시간을 보낸 곳이기에<br>
                             가까운 줄만 알았던 은평의 마을.<br>
@@ -113,7 +113,7 @@
                             청년,<br>
                             그 은밀한 대화;
                         </div>
-                        <div class="mb-3" style="font-size: 14px; color: #979797;">
+                        <div class="mb-5" style="font-size: 14px; color: #979797;">
                             은평에 살고 있는,<br>
                             또는 활동하고 있는 은밀한 청년들.<br>
                             그들은 어떤 생각을 갖고 살아갈까?<br>
@@ -139,7 +139,7 @@
                             평범하게<br>
                             통합전시;
                         </div>
-                        <div class="mb-3" style="font-size: 14px; color: #979797;">
+                        <div class="mb-5" style="font-size: 14px; color: #979797;">
                             익숙한 일상이 색다름이 되는 처음 시작<br>
                             로컬, 사람들이야기를 만나고 연결되고 다시 확장됩니다
                         </div>
@@ -157,10 +157,8 @@
         </div>
         <!-- Left and right controls -->
         <a class="carousel-control-prev" href="#demo" data-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
         </a>
         <a class="carousel-control-next" href="#demo" data-slide="next">
-            <span class="carousel-control-next-icon"></span>
         </a>
     </div>
     {{-- 동네소식 프리뷰 --}}
@@ -227,7 +225,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="head-titlem d-flex align-items-center">
-                    <span class="font-weight-bold" style="font-size: 1rem">게시판</span>
+                    <span class="font-weight-bold" style="font-size: 1rem">이슈키워드</span>
                     <a class="ml-auto" href="{{ route('main.board.index') }}">
                         <span class="text-muted" style="font-size: 0.8rem;">더보기 +</span>
                     </a>

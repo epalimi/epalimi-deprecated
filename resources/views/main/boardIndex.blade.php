@@ -31,7 +31,7 @@
         <div class="col-12">
             <div>
                 <div class="head-title">
-                    <span class="font-weight-bold" style="font-size: 1.2rem;">게시판</span>
+                    <span class="font-weight-bold" style="font-size: 1.2rem;">이슈키워드</span>
                 </div>
                 <hr>
                 <ul class="nav mb-5">
