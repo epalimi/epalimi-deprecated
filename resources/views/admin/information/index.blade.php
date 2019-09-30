@@ -32,12 +32,6 @@
                                         <img src="{{ asset('svg/delete.svg') }}" style="width:22px; height:22px;">
                                     </a>
                                 </td>
-                                <div class="d-none">
-                                    <form id="deleteForm{{ $info->id }}" class="d-none" action="{{ route('admin.information.destroy', ['information' => $info]) }}" method="POST">
-                                        @csrf
-                                        @method('DELETE')
-                                    </form>
-                                </div>
                             </tr>
                             @empty
                             <tr>
@@ -57,4 +51,13 @@
         </div>
     </div>
 </div>
+@endsection
+
+@section('hidden')
+@foreach ($informations as $info)
+<form id="deleteForm{{ $info->id }}" action="{{ route('admin.information.destroy', ['information' => $info]) }}" method="POST">
+    @csrf
+    @method('DELETE')
+</form>
+@endforeach
 @endsection
