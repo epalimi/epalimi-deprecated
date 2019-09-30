@@ -32,10 +32,12 @@
                                         <img src="{{ asset('svg/delete.svg') }}" style="width:22px; height:22px;">
                                     </a>
                                 </td>
-                                <form id="deleteForm{{ $info->id }}" class="d-none" action="{{ route('admin.information.destroy', ['information' => $info]) }}" method="POST">
-                                    @csrf
-                                    @method('DELETE')
-                                </form>
+                                <div class="d-none">
+                                    <form id="deleteForm{{ $info->id }}" class="d-none" action="{{ route('admin.information.destroy', ['information' => $info]) }}" method="POST">
+                                        @csrf
+                                        @method('DELETE')
+                                    </form>
+                                </div>
                             </tr>
                             @empty
                             <tr>
