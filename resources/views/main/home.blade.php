@@ -221,8 +221,8 @@
     {{-- 조직 프리뷰 --}}
     <div class="organization-section mb-5">
         <div class="row">
-            <div class="col-12 col-sm-6 col-md-3">
-                <div class="organization text-center h-100 position-relative text-white d-flex flex-column justify-content-center align-items-center px-2 py-4 mb-3" style="background-color: #e09418;">
+            <div class="col-12 col-sm-6 col-md-3 mb-3">
+                <div class="organization text-center h-100 position-relative text-white d-flex flex-column justify-content-center align-items-center px-2 py-4" style="background-color: #e09418;">
                     <div class="organization-title mb-1" style="font-size: 1.3rem; line-height: 1.3;">
                         은평구<br>
                         마을지원센터
@@ -231,8 +231,8 @@
                     <a class="stretched-link" href="{{ route('main.group', ['query' => '은평구마을지원센터']) }}"></a>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-3">
-                <div class="organization text-center h-100 position-relative text-white d-flex flex-column justify-content-center align-items-center px-2 py-4 mb-3" style="background-color: #ff7e66;">
+            <div class="col-12 col-sm-6 col-md-3 mb-3">
+                <div class="organization text-center h-100 position-relative text-white d-flex flex-column justify-content-center align-items-center px-2 py-4" style="background-color: #ff7e66;">
                     <div class="organization-title mb-1" style="font-size: 1.3rem; line-height: 1.3;">
                         50플러스<br>
                         서부캠퍼스
@@ -241,8 +241,8 @@
                     <a class="stretched-link" href="{{ route('main.group', ['query' => '50플러스서부캠퍼스']) }}"></a>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-3">
-                <div class="organization text-center h-100 position-relative text-white d-flex flex-column justify-content-center align-items-center px-2 py-4 mb-3" style="background-color: #5b99a9;">
+            <div class="col-12 col-sm-6 col-md-3 mb-3">
+                <div class="organization text-center h-100 position-relative text-white d-flex flex-column justify-content-center align-items-center px-2 py-4" style="background-color: #5b99a9;">
                     <div class="organization-title mb-1" style="font-size: 1.3rem; line-height: 1.3;">
                         양천리<br>
                         갤러리
@@ -251,8 +251,8 @@
                     <a class="stretched-link" href="{{ route('main.group', ['query' => '양천리갤러리']) }}"></a>
                 </div>
             </div>
-            <div class="col-12 col-sm-6 col-md-3">
-                <div class="organization text-center h-100 position-relative text-white d-flex flex-column justify-content-center align-items-center px-2 py-4 mb-3" style="background-color: #1484d6;">
+            <div class="col-12 col-sm-6 col-md-3 mb-3">
+                <div class="organization text-center h-100 position-relative text-white d-flex flex-column justify-content-center align-items-center px-2 py-4" style="background-color: #1484d6;">
                     <div class="organization-title mb-1" style="font-size: 1.3rem; line-height: 1.3;">
                         구립은평마을<br>
                         방과후지원센터
