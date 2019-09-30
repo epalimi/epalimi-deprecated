@@ -18,6 +18,15 @@
         line-height: 1.35;
     }
 
+    .carousel-text a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .carousel-text a:hover {
+        text-decoration: none;
+    }
+
     @media (min-width: 576px) {
         .card-columns {
             column-count: 2;
@@ -77,7 +86,7 @@
                             참여비 : 없음 - 열린전시
                         </div>
                         <div style="font-size: 15px; color: #faa419;">
-                            자세히 보기 +
+                            <a href="https://weekday.modoo.at/?link=cx13lbiv">자세히 보기 +</a>
                         </div>
                     </div>
                 </div>
@@ -101,7 +110,7 @@
                             공예체험비 : 3,000원
                         </div>
                         <div style="font-size: 15px; color: #faa419;">
-                            자세히 보기 +
+                            <a href="https://weekday.modoo.at/?link=66qczh97">자세히 보기 +</a>
                         </div>
                     </div>
                 </div>
@@ -126,7 +135,7 @@
                             진행 : 사진전시도 보고 함께 이야기나눔
                         </div>
                         <div style="font-size: 15px; color: #faa419;">
-                            자세히 보기 +
+                            <a href="https://weekday.modoo.at/?link=4mu9qf18">자세히 보기 +</a>
                         </div>
                     </div>
                 </div>
@@ -149,7 +158,7 @@
                             참여비 : 없음 - 열린전시
                         </div>
                         <div style="font-size: 15px; color: #faa419;">
-                            자세히 보기 +
+                            <a href="https://weekday.modoo.at/?link=8zeb6l11">자세히 보기 +</a>
                         </div>
                     </div>
                 </div>
@@ -191,29 +200,41 @@
     <div class="organization-section mb-5">
         <div class="row">
             <div class="col-12 col-sm-6 col-md-3">
-                <div class="organization position-relative text-white d-flex flex-column justify-content-center align-items-center px-2 py-4 mb-3" style="background-color: #e09418;">
-                    <div class="organization-title" style="font-size: 1.3rem;">은평구마을지원센터</div>
+                <div class="organization text-center h-100 position-relative text-white d-flex flex-column justify-content-center align-items-center px-2 py-4 mb-3" style="background-color: #e09418;">
+                    <div class="organization-title mb-1" style="font-size: 1.3rem; line-height: 1.3;">
+                        은평구<br>
+                        마을지원센터
+                    </div>
                     <div class="organization-description" style="font-size:0.85rem;">행사, 활동을 검색해보세요.</div>
                     <a class="stretched-link" href="#"></a>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3">
-                <div class="organization position-relative text-white d-flex flex-column justify-content-center align-items-center px-2 py-4 mb-3" style="background-color: #ff7e66;">
-                    <div class="organization-title" style="font-size: 1.3rem;">50플러스서부캠퍼스</div>
+                <div class="organization text-center h-100 position-relative text-white d-flex flex-column justify-content-center align-items-center px-2 py-4 mb-3" style="background-color: #ff7e66;">
+                    <div class="organization-title mb-1" style="font-size: 1.3rem; line-height: 1.3;">
+                        50플러스<br>
+                        서부캠퍼스
+                    </div>
                     <div class="organization-description" style="font-size:0.85rem;">행사, 교육을 검색해보세요.</div>
                     <a class="stretched-link" href="#"></a>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3">
-                <div class="organization position-relative text-white d-flex flex-column justify-content-center align-items-center px-2 py-4 mb-3" style="background-color: #5b99a9;">
-                    <div class="organization-title" style="font-size: 1.3rem;">양천리갤러리</div>
-                    <div class="organization-description" style="font-size:0.85rem;">행사, 전시을 검색해보세요.</div>
+                <div class="organization text-center h-100 position-relative text-white d-flex flex-column justify-content-center align-items-center px-2 py-4 mb-3" style="background-color: #5b99a9;">
+                    <div class="organization-title mb-1" style="font-size: 1.3rem; line-height: 1.3;">
+                        양천리<br>
+                        갤러리
+                    </div>
+                    <div class="organization-description" style="font-size:0.85rem;">행사, 전시를 검색해보세요.</div>
                     <a class="stretched-link" href="#"></a>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3">
-                <div class="organization position-relative text-white d-flex flex-column justify-content-center align-items-center px-2 py-4 mb-3" style="background-color: #1484d6;">
-                    <div class="organization-title" style="font-size: 1.3rem;">은평구립방과후센터</div>
+                <div class="organization text-center h-100 position-relative text-white d-flex flex-column justify-content-center align-items-center px-2 py-4 mb-3" style="background-color: #1484d6;">
+                    <div class="organization-title mb-1" style="font-size: 1.3rem; line-height: 1.3;">
+                        구립은평마을<br>
+                        방과후지원센터
+                    </div>
                     <div class="organization-description" style="font-size:0.85rem;">행사, 활동을 검색해보세요.</div>
                     <a class="stretched-link" href="#"></a>
                 </div>

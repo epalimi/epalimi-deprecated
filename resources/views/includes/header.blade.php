@@ -9,7 +9,7 @@
             </a>
             <div class="menu rounded-bottom">
                 <a href="{{ route('main.category.index') }}">동네소식</a>
-                <a href="{{ route('main.category', ['category' => 7]) }}">함께공모</a>
+                {{-- <a href="{{ route('main.category', ['category' => 7]) }}">함께공모</a> --}}
                 <a href="{{ route('main.board.index') }}">이슈키워드</a>
                 <a href="https://pf.kakao.com/_dBuWj" target="_blank">참여하기</a>
             </div>
