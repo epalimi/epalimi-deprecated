@@ -8,16 +8,14 @@
         <div class="description text-muted mb-3" style="font-size:0.8rem;">
             {{ $article->description }}
         </div>
-        @if ($article->is_external)
-        <div class="external_link text-muted mt-auto" style="font-size:0.8rem; white-space: nowrap; text-overflow: ellipsis; overflow: hidden;">
-            <span>외부 링크: </span>
-            <span class="btn-link">{{ $article->external_link }}</span>
-        </div>
-        @endif
-        <div class="create-at text-muted {{ $article->is_external ? 'mt-2' : 'mt-auto' }} ml-auto" style="font-size: 0.75rem;">
-            {{ $article->created_at }}
+        <div class="bottom d-flex mt-auto">
+            @if ($article->is_external)
+            <img src="{{ asset('svg/link.svg') }}" style="height:18px;">
+            @endif
+            <span class="created-at text-muted ml-auto" style="font-size: 0.75rem;">{{ $article->created_at->format('Y.m.d') }}</span>
         </div>
     </div>
-    <a class="stretched-link" href="{{ $article->is_external ? $article->external_link : route('main.article', ['article' => $article->id]) }}" {{ $article->is_external ? 'target="_blank"' : '' }}></a>
+    <a class="stretched-link" href="{{ $article->is_external ? $article->external_link : route('main.article', ['article' => $article->id]) }}" title="{{ $article->external_link != null ? $article->external_link : '' }}" {{ $article->is_external ? 'target="_blank"' : '' }}>
+    </a>
     <hr class="w-100 mt-auto">
 </div>

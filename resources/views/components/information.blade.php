@@ -31,7 +31,7 @@
             <span class="text-muted" style="text-overflow: ellipsis; white-space: nowrap; overflow: hidden;">{{ $information->organization }}</span>
             <span class="ml-auto">
                 @if ($information->link != null)
-                <a class="review-link stretched-link" href="{{ $information->link }}">
+                <a class="review-link stretched-link" href="{{ $information->link }}" target="_blank">
                     <img src="{{ asset('svg/detail.svg') }}" style="height:20px;">
                 </a>
                 @else
