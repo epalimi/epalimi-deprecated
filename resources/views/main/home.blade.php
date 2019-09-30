@@ -65,22 +65,22 @@
             </div>
             <div class="col-12 col-sm-6 col-md-3">
                 <div class="organization position-relative text-white d-flex flex-column justify-content-center align-items-center px-2 py-4 mb-3" style="background-color: #ff7e66;">
-                    <div class="organization-title" style="font-size: 1rem;">50플러스서부캠퍼스</div>
-                    <div class="organization-description" style="font-size:0.6rem;">행사, 교육을 검색해보세요.</div>
+                    <div class="organization-title" style="font-size: 1.3rem;">50플러스서부캠퍼스</div>
+                    <div class="organization-description" style="font-size:0.85rem;">행사, 교육을 검색해보세요.</div>
                     <a class="stretched-link" href="#"></a>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3">
                 <div class="organization position-relative text-white d-flex flex-column justify-content-center align-items-center px-2 py-4 mb-3" style="background-color: #5b99a9;">
-                    <div class="organization-title" style="font-size: 1rem;">양천리갤러리</div>
-                    <div class="organization-description" style="font-size:0.6rem;">행사, 전시을 검색해보세요.</div>
+                    <div class="organization-title" style="font-size: 1.3rem;">양천리갤러리</div>
+                    <div class="organization-description" style="font-size:0.85rem;">행사, 전시을 검색해보세요.</div>
                     <a class="stretched-link" href="#"></a>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3">
                 <div class="organization position-relative text-white d-flex flex-column justify-content-center align-items-center px-2 py-4 mb-3" style="background-color: #1484d6;">
-                    <div class="organization-title" style="font-size: 1rem;">은평구립방과후센터</div>
-                    <div class="organization-description" style="font-size:0.6rem;">행사, 활동을 검색해보세요.</div>
+                    <div class="organization-title" style="font-size: 1.3rem;">은평구립방과후센터</div>
+                    <div class="organization-description" style="font-size:0.85rem;">행사, 활동을 검색해보세요.</div>
                     <a class="stretched-link" href="#"></a>
                 </div>
             </div>

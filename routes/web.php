@@ -16,7 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 // 루트페이지
 Route::get('/', function () {
-    $recentlyInformations = App\Information::orderBy('created_at', 'desc')->take(6)->get();
+    $recentlyInformations = App\Information::orderBy('created_at', 'desc')->take(4)->get();
     $recentlyArticles = App\Article::orderBy('created_at', 'desc')->take(4)->get();
     return view('main.home', ['informations' => $recentlyInformations, 'articles' => $recentlyArticles]);
 })->name('main.home');
