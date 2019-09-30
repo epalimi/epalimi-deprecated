@@ -24,7 +24,7 @@
                                 <td>
                                     <a href="{{ route('admin.board.show', ['board' => $board]) }}">{{ $board->title }}</a>
                                 </td>
-                                <td>미구현</td>
+                                <td>{{ $board->articles->count() }}</td>
                                 <td>
                                     <a href="#" onclick="confirmFormSubmit('#deleteForm{{ $board->id }}', '정말 삭제하시겠습니까?\n속한 게시글들 또한 모두 삭제됩니다.')">
                                         <img src="{{ asset('svg/delete.svg') }}" style="width:22px; height:22px;">
