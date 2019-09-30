@@ -40,7 +40,7 @@
     <div class="row">
         <div class="col-12">
             <div class="head-titlem d-flex align-items-center">
-                <span class="font-weight-bold" style="font-size: 1rem">'{{ $query }}' 단체에 대한 소식 모음</span>
+                <span class="font-weight-bold" style="font-size: 1rem">'{{ $query }}' 단체에 대한 등록된 소식 모음</span>
             </div>
             <hr>
         </div>
