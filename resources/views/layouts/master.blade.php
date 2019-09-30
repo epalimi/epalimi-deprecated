@@ -9,10 +9,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     {{-- 타이틀 --}}
     <title>은평알리미</title>
-    {{-- JS 스크립트 --}}
-    <script src="{{ asset('js/app.js') }}"></script>
-    <script src="{{ asset('js/functions.js') }}"></script>
-    @stack('scripts')
     {{-- 웹폰트 --}}
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -22,9 +18,15 @@
 </head>
 
 <body>
+    {{-- Vue 컨테이너 --}}
     <div id="app">
+        {{-- body 섹션 --}}
         @yield('body')
     </div>
+    {{-- JS 스크립트 --}}
+    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('js/functions.js') }}"></script>
+    @stack('scripts')
 </body>
 
 </html>
