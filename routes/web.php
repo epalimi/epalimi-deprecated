@@ -25,7 +25,7 @@ Route::get('/', function () {
 Auth::routes(['register' => false, 'reset' => false]);
 
 // 어드민 콘솔 라우트 그룹
-Route::middleware('auth')->prefix('admin')->name('admin.')->group(function () {
+Route::middleware('auth')->prefix('console')->name('admin.')->group(function () {
 
     // 메인 페이지 라우트
     Route::get('/', function () {
