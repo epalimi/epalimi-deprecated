@@ -55,8 +55,8 @@
                 </button>
             </div>
             <div class="modal-body">
-                <div class="d-flex justify-content-center">
-                    <img style="max-width: 100%" src="{{ $information->thumb != null ? url('storage/'.$information->thumb) : asset('svg/placeholder3x2.svg') }}">
+                <div>
+                    <img class="d-block mx-auto img-fluid" src="{{ $information->thumb != null ? url('storage/'.$information->thumb) : asset('svg/placeholder3x2.svg') }}">
                 </div>
             </div>
         </div>
