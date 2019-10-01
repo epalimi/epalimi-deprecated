@@ -53,8 +53,8 @@
                     <span class="ml-auto text-muted" style="font-size:0.8rem;">{{ $article->board->title }}</span>
                 </div>
                 <div class="article-content px-4 py-4">
-                    <div class="d-flex justify-content-center mb-4">
-                        <img class="img-fluid" src="{{ $article->thumb != null ? url('storage/'.$article->thumb) : asset('svg/placeholder3x2.svg') }}">
+                    <div class="mb-4">
+                        <img class="d-block mx-auto img-fluid" src="{{ $article->thumb != null ? url('storage/'.$article->thumb) : asset('svg/placeholder3x2.svg') }}">
                     </div>
                     <div>
                         {!! nl2br(e($article->description)) !!}
