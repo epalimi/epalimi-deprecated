@@ -32,6 +32,12 @@
         border-bottom: 1px solid lightgray;
     }
 
+    @media (max-width: 600px) {
+        .article-head {
+            flex-direction: column;
+        }
+    }
+
 </style>
 @endpush
 
@@ -48,7 +54,7 @@
                 </div>
                 <div class="article-content px-4 py-4">
                     <div class="d-flex justify-content-center mb-4">
-                        <img src="{{ $article->thumb != null ? url('storage/'.$article->thumb) : asset('svg/placeholder3x2.svg') }}" style="max-width: 100%;">
+                        <img class="img-fluid" src="{{ $article->thumb != null ? url('storage/'.$article->thumb) : asset('svg/placeholder3x2.svg') }}">
                     </div>
                     <div>
                         {!! nl2br(e($article->description)) !!}
