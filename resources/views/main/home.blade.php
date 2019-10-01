@@ -133,7 +133,7 @@
         </div>
     </div>
         {{-- 조직 프리뷰 --}}
-        <div class="organization-section mb-5">
+        <div class="organization-section mt-5">
             <div class="row">
                 <div class="col-12 col-sm-6 col-md-3 mb-3">
                     <div class="organization text-center h-100 position-relative text-white d-flex flex-column justify-content-center align-items-center px-2 py-4" style="background-color: #e09418;">
