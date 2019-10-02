@@ -23,6 +23,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('admin.board.index') }}">게시판 관리</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.banner.index') }}">배너 관리</a>
+                </li>
             </ul>
 
             <!-- Right Side Of Navbar -->
