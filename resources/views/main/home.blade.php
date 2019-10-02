@@ -148,11 +148,11 @@
             <div class="col-12 col-sm-6 col-md-3 mb-3">
                 <div class="organization text-center h-100 position-relative text-white d-flex flex-column justify-content-center align-items-center px-2 py-4" style="background-color: #ff7e66;">
                     <div class="organization-title mb-1" style="font-size: 1.3rem; line-height: 1.3;">
-                        50플러스<br>
-                        서부캠퍼스
+                        크리킨디<br>
+                        센터
                     </div>
                     <div class="organization-description" style="font-size:0.85rem;">행사, 교육을 검색해보세요.</div>
-                    <a class="stretched-link" href="{{ route('main.group', ['query' => '50플러스서부캠퍼스']) }}"></a>
+                    <a class="stretched-link" href="{{ route('main.group', ['query' => '크리킨디센터']) }}"></a>
                 </div>
             </div>
             <div class="col-12 col-sm-6 col-md-3 mb-3">
