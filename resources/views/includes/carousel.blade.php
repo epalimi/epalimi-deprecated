@@ -14,6 +14,50 @@
             <div class="carousel-bgimg position-relative" style="height: 500px; background: no-repeat center/cover url('images/main-1.png');">
                 <div class="carousel-text">
                     <div class="carousel-title mb-3" style="font-size: 45px">
+                        제 10회<br>
+                        은평누리축제
+                    </div>
+                    <div class="carousel-description mb-5" style="font-size: 14px; color: #979797;">
+                        출연진-라퍼커션,3D맵핑 큐브퍼포먼스<br>
+                        축하공연 가수 김장훈 등
+                    </div>
+                    <div class="carousel-bottom mb-4" style="font-size: 17px">
+                        일시 - 10.3(토) 개막제<br>
+                        장소 - 17:00~18:30 은평문화예술회관 공연장
+                    </div>
+                    <div style="font-size: 15px; color: #faa419;">
+                        <a href="https://blog.naver.com/gongricoop/221665723460">자세히 보기 +</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- 두번째 배너 --}}
+        <div class="carousel-item">
+            <div class="carousel-bgimg position-relative" style="height: 500px; background: no-repeat center/cover url('images/main-2.png');">
+                <div class="carousel-text">
+                    <div class="carousel-title mb-3" style="font-size: 45px">
+                        제 10회<br>
+                        은평누리축제
+                    </div>
+                    <div class="carousel-description mb-5" style="font-size: 14px; color: #979797;">
+                        축제의 대미를 장식하고<br>
+                        미래를 꿈꾸는 피날레~
+                    </div>
+                    <div class="carousel-bottom mb-4" style="font-size: 17px">
+                        일시 - 10.5(토) 폐막제<br>
+                        장소 - 17:00 축제광장(역촌역4번출구)
+                    </div>
+                    <div style="font-size: 15px; color: #faa419;">
+                        <a href="https://blog.naver.com/gongricoop/221665723460">자세히 보기 +</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{-- 세번째 배너 --}}
+        <div class="carousel-item">
+            <div class="carousel-bgimg position-relative" style="height: 500px; background: no-repeat center/cover url('images/main-3.png');">
+                <div class="carousel-text">
+                    <div class="carousel-title mb-3" style="font-size: 45px">
                         느린걸음<br>
                         보통날;
                     </div>
@@ -30,57 +74,6 @@
                     </div>
                     <div style="font-size: 15px; color: #faa419;">
                         <a href="https://weekday.modoo.at/?link=cx13lbiv">자세히 보기 +</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {{-- 두번째 배너 --}}
-        <div class="carousel-item">
-            <div class="carousel-bgimg position-relative" style="height: 500px; background: no-repeat center/cover url('images/main-2.png');">
-                <div class="carousel-text">
-                    <div class="carousel-title mb-3" style="font-size: 45px">
-                        가을하늘에<br>
-                        드러나다;
-                    </div>
-                    <div class="carousel-description mb-5" style="font-size: 14px; color: #979797;">
-                        오래 살아왔기에,<br>
-                        많은 시간을 보낸 곳이기에<br>
-                        가까운 줄만 알았던 은평의 마을.<br>
-                        하지만 몰랐던 마을의 이야기는 늘 많습니다.
-                    </div>
-                    <div class="carousel-bottom mb-4" style="font-size: 17px">
-                        일시 : 2019년 10월 5일(토) 3시~5시<br>
-                        장소 : 혁신파크 한평책빵<br>
-                        공예체험비 : 3,000원
-                    </div>
-                    <div style="font-size: 15px; color: #faa419;">
-                        <a href="https://weekday.modoo.at/?link=66qczh97">자세히 보기 +</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        {{-- 세번째 배너 --}}
-        <div class="carousel-item">
-            <div class="carousel-bgimg position-relative" style="height: 500px; background: no-repeat center/cover url('images/main-3.png');">
-                <div class="carousel-text">
-                    <div class="carousel-title mb-3" style="font-size: 45px">
-                        청년,<br>
-                        그 은밀한 대화;
-                    </div>
-                    <div class="carousel-description mb-5" style="font-size: 14px; color: #979797;">
-                        은평에 살고 있는,<br>
-                        또는 활동하고 있는 은밀한 청년들.<br>
-                        그들은 어떤 생각을 갖고 살아갈까?<br>
-                        또 어떤 생각으로 은평을 바라보고 있을까?
-                    </div>
-                    <div class="carousel-bottom mb-4" style="font-size: 17px">
-                        일시 : 2019년 10월 9일(수) / 저녁7시~9시<br>
-                        장소 : 대조동 다용도실 카페<br>
-                        참여비 : 없음<br>
-                        진행 : 사진전시도 보고 함께 이야기나눔
-                    </div>
-                    <div style="font-size: 15px; color: #faa419;">
-                        <a href="https://weekday.modoo.at/?link=4mu9qf18">자세히 보기 +</a>
                     </div>
                 </div>
             </div>
