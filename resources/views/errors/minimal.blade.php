@@ -1,53 +1,57 @@
 @extends('layouts.master')
+
 @push('styles')
-<!-- Styles -->
 <style>
     html,
-    body {
-        background-color: #fff;
-        color: #636b6f;
-        font-family: 'Nunito', sans-serif;
-        font-weight: 100;
-        height: 100vh;
-        margin: 0;
-    }
-
-    .full-height {
+    body,
+    #app {
         height: 100vh;
     }
 
-    .flex-center {
-        align-items: center;
-        display: flex;
-        justify-content: center;
+    .code,
+    .message,
+    .links {
+        opacity: 1;
+        transition: all 1s;
     }
 
-    .position-ref {
-        position: relative;
-    }
-
-    .code {
-        border-right: 2px solid;
-        font-size: 26px;
-        padding: 0 15px 0 15px;
-        text-align: center;
-    }
-
-    .message {
-        font-size: 18px;
-        text-align: center;
+    .closed {
+        opacity: 0;
+        top: -50px;
     }
 
 </style>
 @endpush
-@section('body')
-<div class="flex-center position-ref full-height">
-    <div class="code">
-        @yield('code')
-    </div>
 
-    <div class="message" style="padding: 10px;">
-        @yield('message')
+@push('scripts')
+<script>
+    $(function () {
+        var code = $('.code');
+        var message = $('.message');
+        var links = $('.links');
+
+        code.removeClass('closed');
+        setTimeout(function () {
+            message.removeClass('closed');
+            setTimeout(function () {
+                links.removeClass('closed');
+            }, 400);
+        }, 400);
+    });
+</script>
+@endpush
+
+
+@section('body')
+<div class="d-flex flex-column justify-content-center align-items-center text-center p-3 h-100">
+    <div class="code closed position-relative mb-2 font-weight-bold">
+        <span style="font-size: 4rem; padding: 0 15px;">@yield('code')</span>
+    </div>
+    <div class="message closed position-relative mb-4 text-muted">
+        <span>@yield('message')</span>
+    </div>
+    <div class="links closed position-relative d-flex">
+        <a class="btn btn-outline-success" style="font-size:1.15rem;;" href="{{ url('/') }}">메인으로</a>
     </div>
 </div>
 @endsection
