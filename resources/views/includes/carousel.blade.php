@@ -15,15 +15,16 @@
                 <div class="carousel-text">
                     <div class="carousel-title mb-3" style="font-size: 45px">
                         제 10회<br>
-                        은평누리축제
+                        은평누리축제<br>
+                        개막제
                     </div>
                     <div class="carousel-description mb-5" style="font-size: 14px; color: #979797;">
                         출연진-라퍼커션,3D맵핑 큐브퍼포먼스<br>
                         축하공연 가수 김장훈 등
                     </div>
                     <div class="carousel-bottom mb-4" style="font-size: 17px">
-                        일시 - 10.3(토) 개막제<br>
-                        장소 - 17:00~18:30 은평문화예술회관 공연장
+                        일시 - 10.3(목) 17:00~18:30<br>
+                        장소 - 은평문화예술회관 공연장
                     </div>
                     <div style="font-size: 15px; color: #faa419;">
                         <a href="https://blog.naver.com/gongricoop/221665723460">자세히 보기 +</a>
@@ -37,15 +38,16 @@
                 <div class="carousel-text">
                     <div class="carousel-title mb-3" style="font-size: 45px">
                         제 10회<br>
-                        은평누리축제
+                        은평누리축제<br>
+                        폐막제
                     </div>
                     <div class="carousel-description mb-5" style="font-size: 14px; color: #979797;">
-                        축제의 대미를 장식하고<br>
-                        미래를 꿈꾸는 피날레~
+                        은평누리축제를 기념하는 깊은 울림의 무대<br>
+                        축제의 대미를 장식하고 미래를 꿈꾸는 피날레~
                     </div>
                     <div class="carousel-bottom mb-4" style="font-size: 17px">
-                        일시 - 10.5(토) 폐막제<br>
-                        장소 - 17:00 축제광장(역촌역4번출구)
+                        일시 - 10.5(토) 17:00~19:00<br>
+                        장소 - 축제광장(역촌역4번출구)
                     </div>
                     <div style="font-size: 15px; color: #faa419;">
                         <a href="https://blog.naver.com/gongricoop/221665723460">자세히 보기 +</a>
