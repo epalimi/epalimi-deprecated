@@ -1,5 +1,21 @@
 @extends('layouts.common')
 
+@push('styles')
+<style>
+    .tag-link {
+        padding: .15rem;
+        text-decoration: none;
+        color: #969fa7;
+    }
+
+    .tag-link:hover {
+        text-decoration: none;
+        color: #747474;
+    }
+
+</style>
+@endpush
+
 @section('content')
 <div class="container py-4">
     <div class="row mt-4">
@@ -11,7 +27,7 @@
             <ul class="nav">
                 @foreach ($categories as $category)
                 <li class="nav-item mr-3">
-                    <a href="#{{ $category->category }}">{{ $category->category }}</a>
+                    <a class="tag-link" href="#{{ $category->category }}">{{ $category->category }}</a>
                 </li>
                 @if (!($loop->last))
                 <li class="nav-item mr-3">
@@ -34,7 +50,7 @@
                 <div class="col-md-8">
                     <div class="row">
                         @foreach (App\Organization::where('category', $category->category)->get() as $organization)
-                        <div class="col-md-6 col-lg-4 border-bottom border-right rounded">
+                        <div class="col-lg-6 col-xl-4 border-bottom border-right rounded">
                             <div class="organization d-flex py-2 px-1">
                                 <span>{{ $organization->name }}</span>
                                 @if ($organization->link != null)
