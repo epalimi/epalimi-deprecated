@@ -42,15 +42,15 @@
         }
 
         .carousel-title {
-            font-size: 30px !important;
+            font-size: 35px !important;
         }
 
         .carousel-description {
-            font-size: 13px !important;
+            font-size: 14px !important;
         }
 
         .carousel-bottom {
-            font-size: 14px !important;
+            font-size: 16px !important;
         }
     }
 
