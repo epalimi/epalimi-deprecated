@@ -8,15 +8,27 @@
                 <span class="font-weight-bold" style="font-size: 1rem">단체 소개</span>
             </div>
             <hr>
+            <ul class="nav">
+                @foreach ($categories as $category)
+                <li class="nav-item mr-3">
+                    <a href="#{{ $category->category }}">{{ $category->category }}</a>
+                </li>
+                @if (!($loop->last))
+                <li class="nav-item mr-3">
+                    <span style="color:#cdcdcd;">|</span>
+                </li>
+                @endif
+                @endforeach
+            </ul>
         </div>
     </div>
     <div class="row">
         <div class="col-12">
             @forelse ($categories as $category)
-            <div class="row my-5">
+            <div id="{{ $category->category }}" class="row mt-5" style="margin-bottom: 5rem;">
                 <div class="col-md-4 mb-3">
                     <div class="d-felx">
-                        <span style="font-size: 2.5rem;">{{ $category->category }}</span>
+                        <div class="font-weight-bold text-center text-md-left" style="font-size: 2.5rem;">{{ $category->category }}</div>
                     </div>
                 </div>
                 <div class="col-md-8">

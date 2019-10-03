@@ -1,7 +1,7 @@
 @push('styles')
 <style>
     .kakao-link-image {
-        height: 40px;
+        height: 55px;
     }
 
 </style>
