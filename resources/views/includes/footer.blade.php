@@ -24,8 +24,8 @@
             <div class="col-12 col-md-4 mt-2">
                 <div class="footer-links">
                     <a class="mr-3" href="#">ABOUT</a>
-                    <a class="mr-3" href="#">블로그</a>
-                    <a href="#">제휴/문의</a>
+                    <a class="mr-3" href="https://blog.naver.com/gongricoop">블로그</a>
+                    <a href="tel: 01023548202">제휴/문의</a>
                 </div>
             </div>
             <div class="col-12 text-white-50 mt-2" style="font-size: 0.8rem;">
