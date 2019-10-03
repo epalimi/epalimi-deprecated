@@ -1,3 +1,19 @@
+@push('styles')
+<style>
+    .kakao-link-image {
+        height: 40px;
+    }
+
+</style>
+@endpush
+
+<div class="container">
+    <div class="d-flex justify-content-center">
+        <a href="https://pf.kakao.com/_dBuWj" target="_blank">
+            <img class="kakao-link-image mw-100 my-4" src="{{ asset('images/kakao.png') }}">
+        </a>
+    </div>
+</div>
 <footer class="text-light p-4" style="background-color: #636363;">
     <div class="container">
         <div class="row">
