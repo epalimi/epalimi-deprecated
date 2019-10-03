@@ -51,10 +51,10 @@
                     <div class="row">
                         @foreach (App\Organization::where('category', $category->category)->get() as $organization)
                         <div class="col-md-6 col-lg-4 border-bottom border-right rounded">
-                            <div class="organization d-flex align-items-center h-100 py-2 px-1">
+                            <div class="organization position-relative d-flex align-items-center h-100 py-2 px-1">
                                 <span>{{ $organization->name }}</span>
                                 @if ($organization->link != null)
-                                <a class="d-flex justify-content-center align-items-center ml-auto" href="{{ $organization->link }}" target="_blank">
+                                <a class="d-flex justify-content-center align-items-center stretched-link ml-auto" href="{{ $organization->link }}" target="_blank">
                                     <img src="{{ asset('svg/link.svg') }}" style="height:16px;">
                                 </a>
                                 @endif
