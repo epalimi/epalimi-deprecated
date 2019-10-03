@@ -21,7 +21,7 @@
     <div class="row mt-4">
         <div class="col-12">
             <div class="head-titlem d-flex align-items-center">
-                <span class="font-weight-bold" style="font-size: 1rem">단체 소개</span>
+                <span class="font-weight-bold" style="font-size: 1rem">단체소개</span>
             </div>
             <hr>
             <ul class="nav">
