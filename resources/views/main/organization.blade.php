@@ -50,8 +50,8 @@
                 <div class="col-md-8">
                     <div class="row">
                         @foreach (App\Organization::where('category', $category->category)->get() as $organization)
-                        <div class="col-lg-6 col-xl-4 border-bottom border-right rounded">
-                            <div class="organization d-flex py-2 px-1">
+                        <div class="col-md-6 col-lg-4 border-bottom border-right rounded">
+                            <div class="organization d-flex align-items-center py-2 px-1">
                                 <span>{{ $organization->name }}</span>
                                 @if ($organization->link != null)
                                 <a class="d-flex justify-content-center align-items-center ml-auto" href="{{ $organization->link }}" target="_blank">
