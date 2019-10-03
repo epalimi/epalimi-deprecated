@@ -14,7 +14,7 @@
 </style>
 @endpush
 
-<div id="{{ $information->id }}" class="card rounded-top">
+<div id="{{ $information->id }}" class="card rounded-top border-bottom">
     <img class="card-img-top" src="{{ $information->thumb != null ? url('storage/'.$information->thumb) : asset('svg/placeholder3x2.svg') }}">
     <div class="card-body">
         <div class="duration p-3 text-white font-weight-bold" style="background-color: rgb(38, 73, 145);">
