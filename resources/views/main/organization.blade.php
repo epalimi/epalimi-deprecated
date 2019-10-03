@@ -27,16 +27,18 @@
 
 @push('scripts')
 <script>
-    $('a[href*="#"]').on('click', function(e) {
-        e.preventDefault()
+    $(function() {
+        $('a[href*="#"]').on('click', function(e) {
+            e.preventDefault()
 
-        $('html, body').animate(
-            {
-            scrollTop: $($(this).attr('href')).offset().top - ($(window).height()/4),
-            },
-            250,
-            'swing'
-        )
+            $('html, body').animate(
+                {
+                scrollTop: $($(this).attr('href')).offset().top - ($(window).height()/4),
+                },
+                250,
+                'swing'
+            );
+        });
     });
 </script>
 @endpush
