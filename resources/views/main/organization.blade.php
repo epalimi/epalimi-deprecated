@@ -13,6 +13,15 @@
         color: #747474;
     }
 
+    .tag-link.tag-actvie {
+        font-weight: bold;
+        color: #484a51;
+    }
+
+    .tag-link.tag-actvie:hover {
+        color: #484a51;
+    }
+
 </style>
 @endpush
 
@@ -27,7 +36,7 @@
             <ul class="nav">
                 @foreach ($categories as $category)
                 <li class="nav-item mr-3">
-                    <a class="tag-link" href="#{{ $category->category }}">{{ $category->category }}</a>
+                    <a class="tag-link {{ $loop->first ? 'tag-actvie' : '' }}" href="#{{ $category->category }}">{{ $category->category }}</a>
                 </li>
                 @if (!($loop->last))
                 <li class="nav-item mr-3">
