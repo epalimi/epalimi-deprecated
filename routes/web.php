@@ -84,7 +84,7 @@ Route::name('main.')->group(function () {
 
     // 단체
     Route::get('/organization', function () {
-        $categories = App\Organization::select(['category', 'id'])->orderBy('created_at')->groupBy('category')->get();
+        $categories = App\Organization::select('category')->orderBy('created_at')->groupBy('category')->addSelect('id')->get();
         return view('main.organization', ['categories' => $categories]);
     })->name('organization');
 });
