@@ -54,7 +54,7 @@
             <ul class="nav">
                 @foreach ($categories as $category)
                 <li class="nav-item mr-3">
-                    <a class="tag-link {{ $loop->first ? 'tag-actvie' : '' }}" href="#{{ $category->category }}">{{ $category->category }}</a>
+                    <a class="tag-link {{ $loop->first ? 'tag-actvie' : '' }}" href="#{{ $category->id }}">{{ $category->category }}</a>
                 </li>
                 @if (!($loop->last))
                 <li class="nav-item mr-3">
@@ -68,7 +68,7 @@
     <div class="row">
         <div class="col-12">
             @forelse ($categories as $category)
-            <div id="{{ $category->category }}" class="row mt-5" style="margin-bottom: 5rem;">
+            <div id="{{ $category->id }}" class="row mt-5" style="margin-bottom: 5rem;">
                 <div class="col-md-4 mb-3">
                     <div class="d-felx">
                         <div class="font-weight-bold text-center text-md-left" style="font-size: 2.5rem;">{{ $category->category }}</div>
