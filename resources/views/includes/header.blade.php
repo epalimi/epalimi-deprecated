@@ -11,7 +11,7 @@
                 <a href="{{ route('main.category.index') }}">동네소식</a>
                 {{-- <a href="{{ route('main.category', ['category' => 7]) }}">함께공모</a> --}}
                 <a href="{{ route('main.board.index') }}">이슈키워드</a>
-                <a href="{{ route('main.organization.index') }}">단체소개</a>
+                <a href="{{ route('main.organization') }}">단체소개</a>
             </div>
         </nav>
     </div>
