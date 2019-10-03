@@ -81,4 +81,10 @@ Route::name('main.')->group(function () {
         $previews = App\Article::where('board_id', $article->board->id)->orderBy('created_at', 'desc')->take(4)->get();
         return view('main.article', ['article' => $article, 'previews' => $previews]);
     })->name('article');
+
+    // 단체
+    Route::get('/organization', function () {
+        $categories = App\Organization::select('category')->distinct()->get();
+        return view('main.organization', ['categories' => $categories]);
+    })->name('organization');
 });
