@@ -44,6 +44,9 @@ Route::middleware('auth')->prefix('console')->name('admin.')->group(function () 
 
     // 배너(Banner) 리소스 라우트
     Route::resource('banner', 'BannerController');
+
+    // 단체(Organization) 리소스 라우트
+    Route::resource('organization', 'OrganizationController');
 });
 
 // 메인 라우트 (일반적인 유저들이 접근하는 라우트)

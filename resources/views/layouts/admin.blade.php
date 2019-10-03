@@ -2,7 +2,7 @@
 
 @section('body')
 <nav class="navbar navbar-expand-md navbar-dark bg-dark shadow-sm">
-    <div class="container">
+    <div class="container-fluid">
         <a class="navbar-brand" href="{{ route('admin.main') }}">
             은평공리 <span class="text-danger">관리자 콘솔</span>
         </a>
@@ -22,6 +22,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('admin.board.index') }}">게시판 관리</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('admin.organization.index') }}">단체 관리</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('admin.banner.index') }}">배너 관리</a>
