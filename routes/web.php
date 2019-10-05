@@ -21,6 +21,11 @@ Route::get('/', function () {
     return view('main.home', ['informations' => $recentlyInformations, 'articles' => $recentlyArticles]);
 })->name('main.home');
 
+// 사이트맵 라우트
+// Route::get('/sitemap', function () {
+//     return response()->
+// })->name('sitemap');
+
 // 로그인(Auth) 라우트
 Auth::routes(['register' => false, 'reset' => false]);
 

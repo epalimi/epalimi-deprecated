@@ -1,18 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-     <url>
-            <loc>http://www.epalimi.com/</loc>  
-     </url>
-	 
-	 <url>
-          <loc>http://www.epalimi.com/category</loc>
-		<loc>http://www.epalimi.com/category/5</loc> 
-		<loc>http://www.epalimi.com/category/6</loc> 
-		<loc>http://www.epalimi.com/category/7</loc> 
-		<loc>http://www.epalimi.com/board</loc>
-          <loc>http://www.epalimi.com/board/1</loc>
-          <loc>http://www.epalimi.com/board/2</loc>
-          <loc>http://www.epalimi.com/group/%EC%9D%80%ED%8F%89%EA%B5%AC%EB%A7%88%EC%9D%84%EC%A7%80%EC%9B%90%EC%84%BC%ED%84%B0</loc>
-     </url> 
-</urlset>        
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+   <url>
+      <loc>http://www.epalimi.com/</loc>
+   </url>
+   <url>
+      <loc>http://www.epalimi.com/category</loc>
+   </url>
+   <url>
+      <loc>http://www.epalimi.com/category/5</loc>
+   </url>
+   <url>
+      <loc>http://www.epalimi.com/category/6</loc>
+   </url>
+   <url>
+	  <loc>http://www.epalimi.com/category/7</loc>
+   </url>
+    <url>
+      <loc>http://www.epalimi.com/board</loc>
+   </url>
+   <url>
+      <loc>http://www.epalimi.com/board/1</loc>
+   </url>
+   <url>
+      <loc>http://www.epalimi.com/board/2</loc>
+   </url>
+   <url>
+	  <loc>http://www.epalimi.com/group/%EC%9D%80%ED%8F%89%EA%B5%AC%EB%A7%88%EC%9D%84%EC%A7%80%EC%9B%90%EC%84%BC%ED%84%B0</loc>
+   </url>
+</urlset>
