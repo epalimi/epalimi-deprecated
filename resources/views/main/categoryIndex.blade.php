@@ -86,10 +86,12 @@
                             </a>
                         </div>
                         <hr>
-                        <div class="card-columns col-12">
+                        <div class="row">
                             @forelse ($category->informations()->take(8)->get() as $information)
-                            @component('components.information', ['information' => $information])
-                            @endcomponent
+                            <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex flex-column">
+                                @component('components.information', ['information' => $information])
+                                @endcomponent
+                            </div>
                             @empty
                             <span>소식이 없습니다.</span>
                             @endforelse
