@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="col-12 text-white-50 mt-2" style="font-size: 0.8rem;">
-                주소: 서울시 은평구 통일로 6848동 50플러스서부캠퍼스 3층 / TEL: 010-2354-8202 / Kakaotalk: 은평알리미 / 이메일주소: gongricoop@gmail.com
+                주소: 서울시 은평구 은평로 245 3층 / TEL: 010-2354-8202 / Kakaotalk: 은평알리미 / 이메일주소: gongricoop@gmail.com
             </div>
         </div>
     </div>
