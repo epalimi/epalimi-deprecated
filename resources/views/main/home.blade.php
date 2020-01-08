@@ -114,7 +114,7 @@
             <div class="col-12">
                 <div class="head-titlem d-flex align-items-center">
                     <span class="font-weight-bold" style="font-size: 1rem">공모</span>
-                    <a class="ml-auto" href="{{ href="{{ route('main.category', ['category' => 7]) }}" }}">
+                    <a class="ml-auto" href="{{ route('main.category', ['category' => 7]) }}">
                         <span class="text-muted" style="font-size: 0.8rem;">더보기 +</span>
                     </a>
                 </div>
