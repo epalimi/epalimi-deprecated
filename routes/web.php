@@ -17,8 +17,9 @@ use Illuminate\Support\Facades\Route;
 // 루트페이지
 Route::get('/', function () {
     $recentlyInformations = App\Information::where('category_id', '!=', 7)->orderBy('created_at', 'desc')->take(8)->get();
+    $recentlyGongmos = App\Information::where('category_id', 7)->orderBy('created_at', 'desc')->take(4)->get();
     $recentlyArticles = App\Article::orderBy('created_at', 'desc')->take(4)->get();
-    return view('main.home', ['informations' => $recentlyInformations, 'articles' => $recentlyArticles]);
+    return view('main.home', ['informations' => $recentlyInformations, 'gongmos' => $recentlyGongmos, 'articles' => $recentlyArticles]);
 })->name('main.home');
 
 // 사이트맵 라우트

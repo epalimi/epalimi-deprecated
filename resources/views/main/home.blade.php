@@ -108,6 +108,34 @@
             </div>
         </div>
     </div>
+    {{-- 공모 프리뷰 --}}
+    <div class="gongmo-preview" style="margin-bottom: 2.2rem;">
+        <div class="row">
+            <div class="col-12">
+                <div class="head-titlem d-flex align-items-center">
+                    <span class="font-weight-bold" style="font-size: 1rem">공모</span>
+                    <a class="ml-auto" href="{{ href="{{ route('main.category', ['category' => 7]) }}" }}">
+                        <span class="text-muted" style="font-size: 0.8rem;">더보기 +</span>
+                    </a>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    @forelse ($gongmos as $gongmo)
+                    <div class="col-12 col-sm-6 col-md-4 col-lg-3 mb-4 d-flex flex-column">
+                        @component('components.information', ['information' => $gongmo])
+                        @endcomponent
+                    </div>
+                    @empty
+                    <span>소식이 없습니다.</span>
+                    @endforelse
+                </div>
+            </div>
+        </div>
+    </div>
     {{-- 게시판 프리뷰 --}}
     <div class="article-preview">
         <div class="row">
